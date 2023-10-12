@@ -1,0 +1,1289 @@
+{
+	"name":"Totalmix",
+  "type":"OSC",
+  "path":"Software",
+  
+  "version":"2.0",
+  "description":"Allow you to control RME-Totalmix with chataigne",
+  "url":"",
+  "downloadURL":"",
+	
+	"hasInput": true,
+	"hasOutput": true, 
+
+	"hideDefaultCommands": true,
+	"hideDefaultParameters": [
+	"useHierarchy",
+	"colorSendMode",
+	"booleanSendMode" ],
+	
+	"defaults": {
+		"autoAdd":true,
+		"OSC Input": {
+			"localPort" : 9000, },
+			
+		"OSC Outputs": {
+			"OSC Output": {
+				"local" : false,
+				"remotePort" : 8000,
+				"listenToFeedback":false } }
+	},
+	
+	"parameters": {
+	},
+	
+	"scripts": ["Totalmix.js"],
+	
+	"values":  {
+	
+		"Name":
+			{ "type":"String",
+				"description":"un nom..."
+			},
+		
+		"TrackNames":
+		{
+			"type":"Container",
+			"Click to update all":
+			{ "type":"Trigger",
+				"description":"Update actual device status.\n"
+			},
+			"Track1":
+			{ "type":"String",
+				"description":"Actual scene index is two integers split by a dot.\n"
+			},
+			"Track2":
+			{ "type":"String",
+				"description":"As specified in d&b R1.\n"
+			},
+			"Track3":
+			{ "type":"String",
+				"description":"As specified in d&b R1.\n"
+			},
+			"Track4":
+			{ "type":"String",
+				"description":"Actual scene index is two integers split by a dot.\n"
+			},
+			"Track5":
+			{ "type":"String",
+				"description":"As specified in d&b R1.\n"
+			},
+			"Track6":
+			{ "type":"String",
+				"description":"As specified in d&b R1.\n"
+			},
+			"Track7":
+			{ "type":"String",
+				"description":"Actual scene index is two integers split by a dot.\n"
+			},
+			"Track8":
+			{ "type":"String",
+				"description":"As specified in d&b R1.\n"
+			}
+		},
+		
+	
+	},
+	
+	"commands": {
+	
+		"Undo" : {
+			"menu" : "",
+			"callback" : "undo",
+		},
+		
+		"Redo" : {
+			"menu" : "",
+			"callback" : "redo",
+		},
+		
+		"MasterVolume" : {
+			"menu" : "Globals",
+			"callback" : "MasterVolume",
+			"parameters" : {
+				"Level": {
+					"type": "Float",
+					"default": 0.6, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+			
+		"Set Snapshot" : {
+			"menu" : "Globals",
+			"callback" : "Snapshots",
+			"parameters" : {
+				"Select": {
+					"type": "Enum",
+					"options" : {
+						"Snapshot 1" : 8,
+						"Snapshot 2" : 7,
+						"Snapshot 3" : 6,
+						"Snapshot 4" : 5,
+						"Snapshot 5" : 4,
+						"Snapshot 6" : 3,
+						"Snapshot 7" : 2,
+						"Snapshot 8" : 1	}  }, 
+		}  },
+				
+		"Global Mute" : {
+			"menu" : "Globals",
+			"callback" : "globalMute",
+		},
+		
+		"Global Solo" : {
+			"menu" : "Globals",
+			"callback" : "globalSolo",
+		},
+		
+		"Trim" : {
+			"menu" : "Globals",
+			"callback" : "Trim",			
+		},
+		
+		"Recall" : {
+			"menu" : "Globals",
+			"callback" : "mainRecall",
+		},
+		
+		"Mono" : {
+			"menu" : "Globals",
+			"callback" : "mainMono",
+		},
+		
+		"Talkback" : {
+			"menu" : "Globals",
+			"callback" : "mainTalkback",
+		},
+		
+		"Extern-In" : {
+			"menu" : "Globals",
+			"callback" : "mainExtin",
+		},
+		
+		"MainDim" : {
+			"menu" : "Globals",
+			"callback" : "mainDim",
+		},
+		
+		"MuteFx" : {
+			"menu" : "Globals",
+			"callback" : "mainMuteFx",
+		},
+		
+		"MasterChVolume" : {
+			"menu" : "Mixer",
+			"callback" : "MasterChVolume",
+			"parameters" : {
+				"Level": {
+					"type": "Float",
+					"default": 0.6, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+
+
+		"ChVolume" : {
+			"menu" : "Mixer",
+			"callback" : "ChVolume",
+			"parameters" : {
+				
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" } },
+			
+				"Channel": {
+					"type": "Integer",
+					"default": 1, 
+					"min":1,
+					"max":32,
+					"useForMapping": true }, 
+					
+				"Level": {
+					"type": "Float",
+					"default": 0.6, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}	},
+		
+		"ChPan" : {
+			"menu" : "Mixer",
+			"callback" : "ChPan",
+			"parameters" : {
+				
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" } },
+			
+				"Channel": {
+					"type": "Integer",
+					"default": 1, 
+					"min":1,
+					"max":32,
+					"useForMapping": true }, 
+				
+				"Pan": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ChMute" : {
+			"menu" : "Mixer",
+			"callback" : "ChMute",
+			"parameters" : {
+				
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" } },
+			
+				"Channel": {
+					"type": "Integer",
+					"default": 1, 
+					"min":1,
+					"max":32,
+					"useForMapping": true }, 
+				
+				"Mute on/off": {
+					"type": "Enum",
+					"options" : {
+						"On" : 1.0,
+						"Off" : 0.0, } }, 
+		}  },
+				
+		"ChSolo" : {
+			"menu" : "Mixer",
+			"callback" : "ChSolo",
+			"parameters" : {
+				
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" } },
+			
+				"Channel": {
+					"type": "Integer",
+					"default": 1, 
+					"min":1,
+					"max":32,
+					"useForMapping": true  },
+					
+				"Solo on/off": {
+					"type": "Enum",
+					"options" : {
+						"On" : 1.0,
+						"Off" : 0.0, } },  
+				
+		}	},
+		
+		"ChGroup" : {
+			"menu" : "Mixer",
+			"callback" : "ChSelect",
+			"parameters" : {
+			
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" } },
+			
+				"Channel": {				
+					"type": "Integer",
+					"default": 1, 
+					"min":1,
+					"max":32,
+					"useForMapping": true }, 
+					
+				"Group-Faders": {
+					"type": "Enum",
+					"options" : {
+						"On" : 1.0,
+						"Off" : 0.0, } }, 
+				
+		}  },
+		
+	
+		"Volume" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChannelVol",
+			"parameters" : {
+				"Level": {
+					"type": "Float",
+					"default": 0.6, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+			
+		"Gain" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChGain",
+			"parameters" : {
+				
+				
+							
+				"mic(0-65db);line(0-12db!!)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true },   
+				}  },
+			
+		"Pan" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChPan",
+			"parameters" : {		
+				"Pan": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true },   
+		}  },
+		
+		"Mute" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChMute",
+		},
+		
+		"Solo" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChSolo",
+		},
+		
+		"Cue" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChCue",
+		},
+		
+		"Phase" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChPhase",
+		},
+		
+		"Phantom" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChPhantom",
+		},
+	
+		
+		"Autoset" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChAutoset",
+		},
+		
+		"Loopback" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChLoopback",
+		},
+		
+		"Stereo" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelChStereo",
+		},
+		
+		
+		"SetChanLayer" : {
+			"menu" : "ActiveChannel",
+			"callback" : "SelSetLayer",
+			"parameters" : {
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" }  },	
+		}  },
+			
+		
+		"Trigger1" : {
+			"menu" : "ActiveChannel",
+			"callback" : "TrackTrigg1",
+		},	
+		
+		"Trigger2" : {
+			"menu" : "ActiveChannel",
+			"callback" : "TrackTrigg2",
+		},
+		
+		"Track back" : {
+			"menu" : "ActiveChannel",
+			"callback" : "TrackMoins",
+		},
+				
+		"Track go" : {
+			"menu" : "ActiveChannel",
+			"callback" : "TrackPlus",
+		},		
+		
+		"EQ-Full" : {
+			"menu" : "ActiveChMore",
+			"callback" : "SelChEqFull",
+			"parameters" : {
+			
+			"EQ Toggle on/off": {
+					"type": "Enum",
+					"options" : {
+						"On/Off" : 1.0,
+						"inactive" : 0.0, } },
+			
+			"B1 Type": {
+					"type": "Enum",
+					"options" : {
+						"Shelf" : 1.0,
+						"BandPass" : 0.0, } }, 
+						
+			"B1 Gain (-20db to +20db)": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+				
+			"B1 Freq (Select)": {"type": "Enum",
+					"options" : {
+						"20" : 0,
+						"40" : 0.1,
+						"50" : 0.136,
+						"63" : 0.167,
+						"80" : 0.2,
+						"100" : 0.236,
+						"125" : 0.267,
+						"160" : 0.3,
+						"200" : 0.335,
+						"250" : 0.367,
+						"320" : 0.403,
+						"400" : 0.434,
+						"500" : 0.468,
+						"630" : 0.5,
+						"800" : 0.534,
+						"1000" : 0.568,
+						"1.25K" : 0.6,
+						"1.6K" : 0.636,
+						"2K" : 0.666,
+						"2.5K" : 0.7,
+						"3.15K" : 0.736,
+						"4K" : 0.767,
+						"5K" : 0.8,
+						"6.3K" : 0.833,
+						"8K" : 0.866,
+						"10K" : 0.9,
+						"12K" : 0.933,
+						"16K" : 0.967,
+						"20K" : 0.999,   } 	},  
+					
+			"B1 Q (select)": {"type": "Enum",
+					"options" : {
+						"0.7" : 0,
+						"0.9" : 0.05,
+						"1.1" : 0.1,
+						"1.3" : 0.15,
+						"1.5" : 0.2,
+						"1.7" : 0.25,
+						"2.0" : 0.31,
+						"2.2" : 0.35,
+						"2.4" : 0.4,
+						"2.6" : 0.45,
+						"2.8" : 0.5,
+						"3.0" : 0.55,
+						"3.2" : 0.6,
+						"3.5" : 0.65,
+						"3.7" : 0.7,
+						"3.9" : 0.75,
+						"4.1" : 0.8,
+						"4.3" : 0.85,
+						"4.5" : 0.9,
+						"4.7" : 0.95,
+						"5.0" : 0.999,   } 	},  
+					
+			"B2 Gain (-20db to +20db)": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+				
+			"B2 Freq (Select)": {"type": "Enum",
+					"options" : {
+						"20" : 0,
+						"40" : 0.1,
+						"50" : 0.136,
+						"63" : 0.167,
+						"80" : 0.2,
+						"100" : 0.236,
+						"125" : 0.267,
+						"160" : 0.3,
+						"200" : 0.335,
+						"250" : 0.367,
+						"320" : 0.403,
+						"400" : 0.434,
+						"500" : 0.468,
+						"630" : 0.5,
+						"800" : 0.534,
+						"1000" : 0.568,
+						"1.25K" : 0.6,
+						"1.6K" : 0.636,
+						"2K" : 0.666,
+						"2.5K" : 0.7,
+						"3.15K" : 0.736,
+						"4K" : 0.767,
+						"5K" : 0.8,
+						"6.3K" : 0.833,
+						"8K" : 0.866,
+						"10K" : 0.9,
+						"12K" : 0.933,
+						"16K" : 0.967,
+						"20K" : 0.999,   } 	},
+					
+			"B2 Q (select)": {"type": "Enum",
+					"options" : {
+						"0.7" : 0,
+						"0.9" : 0.05,
+						"1.1" : 0.1,
+						"1.3" : 0.15,
+						"1.5" : 0.2,
+						"1.7" : 0.25,
+						"2.0" : 0.31,
+						"2.2" : 0.35,
+						"2.4" : 0.4,
+						"2.6" : 0.45,
+						"2.8" : 0.5,
+						"3.0" : 0.55,
+						"3.2" : 0.6,
+						"3.5" : 0.65,
+						"3.7" : 0.7,
+						"3.9" : 0.75,
+						"4.1" : 0.8,
+						"4.3" : 0.85,
+						"4.5" : 0.9,
+						"4.7" : 0.95,
+						"5.0" : 0.999,   } 	}, 	
+					
+			"B3 Type": {
+					"type": "Enum",
+					"options" : {
+						"BandPass" : 0.0,
+						"Shelf" : 0.5,
+						"Cut" : 1.0, } }, 
+						
+			"B3 Gain (-20db to +20db)": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+				
+			"B3 Freq (Select)": {"type": "Enum",
+					"options" : {
+						"20" : 0,
+						"40" : 0.1,
+						"50" : 0.136,
+						"63" : 0.167,
+						"80" : 0.2,
+						"100" : 0.236,
+						"125" : 0.267,
+						"160" : 0.3,
+						"200" : 0.335,
+						"250" : 0.367,
+						"320" : 0.403,
+						"400" : 0.434,
+						"500" : 0.468,
+						"630" : 0.5,
+						"800" : 0.534,
+						"1000" : 0.568,
+						"1.25K" : 0.6,
+						"1.6K" : 0.636,
+						"2K" : 0.666,
+						"2.5K" : 0.7,
+						"3.15K" : 0.736,
+						"4K" : 0.767,
+						"5K" : 0.8,
+						"6.3K" : 0.833,
+						"8K" : 0.866,
+						"10K" : 0.9,
+						"12K" : 0.933,
+						"16K" : 0.967,
+						"20K" : 0.999,   } 	},
+					
+			"B3 Q (select)": {"type": "Enum",
+					"options" : {
+						"0.7" : 0,
+						"0.9" : 0.05,
+						"1.1" : 0.1,
+						"1.3" : 0.15,
+						"1.5" : 0.2,
+						"1.7" : 0.25,
+						"2.0" : 0.31,
+						"2.2" : 0.35,
+						"2.4" : 0.4,
+						"2.6" : 0.45,
+						"2.8" : 0.5,
+						"3.0" : 0.55,
+						"3.2" : 0.6,
+						"3.5" : 0.65,
+						"3.7" : 0.7,
+						"3.9" : 0.75,
+						"4.1" : 0.8,
+						"4.3" : 0.85,
+						"4.5" : 0.9,
+						"4.7" : 0.95,
+						"5.0" : 0.999,   } 	}, 
+					
+			"LoCut Toggle on/off": {
+					"type": "Enum",
+					"options" : {
+						"inactive" : 0.0,
+						"On/Off" : 1.0,
+						 } },
+					
+			"LoCut Slope": {
+					"type": "Enum",
+					"options" : {
+						"6db/oct" : 0.0,
+						"12db/oct" : 0.3,
+						"18db/oct" : 0.6,
+						"24db/oct" : 1.0, } },  
+				
+			"LoCut Freq (Select)": {
+					"type": "Enum",
+					"options" : {
+						"20" : 0,
+						"30" : 0.136,
+						"40" : 0.22,
+						"45" : 0.26,
+						"50" : 0.29,
+						"55" : 0.32,
+						"60" : 0.34,
+						"65" : 0.36,
+						"70" : 0.395,
+						"80" : 0.43,
+						"90" : 0.465,
+						"100" : 0.501,
+						"120" : 0.56,
+						"140" : 0.61,
+						"160" : 0.643,
+						"180" : 0.68,
+						"200" : 0.72,
+						"220" : 0.745,
+						"240" : 0.77,
+						"260" : 0.8,
+						"280" : 0.82,
+						"300" : 0.84,
+						"320" : 0.86,
+						"360" : 0.9,
+						"400" : 0.933,
+						"440" : 0.96,
+						"500" : 0.999,   } 	},		 				
+		}  },
+	
+		"EQ SingleBand" : {
+			"menu" : "ActiveChMore",
+			"callback" : "SelChEqSingle",
+			"parameters" : {
+			
+			"EQ Band": {
+					"type": "Enum",
+					"options" : {
+						"Band 1" : 1,
+						"Band 2" : 2,
+						"Band 3" : 3, } },
+						
+			"EQ Type": {
+					"type": "Enum",
+					"options" : {
+						"BandPass" : 0.0,
+						"Shelf" : 0.5, 
+						"B3=>Cut" : 1.0,
+						} }, 
+						
+			"Gain (-20db to +20db)": {
+					"type": "Float",
+					"default": 0.5, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+				
+			"Freq (Select)": {"type": "Enum",
+					"options" : {
+						"20" : 0,
+						"40" : 0.1,
+						"50" : 0.136,
+						"63" : 0.167,
+						"80" : 0.2,
+						"100" : 0.236,
+						"125" : 0.267,
+						"160" : 0.3,
+						"200" : 0.335,
+						"250" : 0.367,
+						"320" : 0.403,
+						"400" : 0.434,
+						"500" : 0.468,
+						"630" : 0.5,
+						"800" : 0.534,
+						"1000" : 0.568,
+						"1.25K" : 0.6,
+						"1.6K" : 0.636,
+						"2K" : 0.666,
+						"2.5K" : 0.7,
+						"3.15K" : 0.736,
+						"4K" : 0.767,
+						"5K" : 0.8,
+						"6.3K" : 0.833,
+						"8K" : 0.866,
+						"10K" : 0.9,
+						"12K" : 0.933,
+						"16K" : 0.967,
+						"20K" : 0.999,   } 	},
+					
+			"Q (select)": {"type": "Enum",
+					"options" : {
+						"0.7" : 0,
+						"0.9" : 0.05,
+						"1.1" : 0.1,
+						"1.3" : 0.15,
+						"1.5" : 0.2,
+						"1.7" : 0.25,
+						"2.0" : 0.31,
+						"2.2" : 0.35,
+						"2.4" : 0.4,
+						"2.6" : 0.45,
+						"2.8" : 0.5,
+						"3.0" : 0.55,
+						"3.2" : 0.6,
+						"3.5" : 0.65,
+						"3.7" : 0.7,
+						"3.9" : 0.75,
+						"4.1" : 0.8,
+						"4.3" : 0.85,
+						"4.5" : 0.9,
+						"4.7" : 0.95,
+						"5.0" : 0.999,   } 	}, 									
+		}  },
+	
+		"EQ Toggle on/off" : {
+			"menu" : "ActiveChMore",
+			"callback" : "SelChEqOn",
+		},
+	
+		
+			  			  		
+		"LoCut" : {
+			"menu" : "ActiveChMore",
+			"callback" : "SelChLocut",
+			"parameters" : {
+			
+			"Select Slope ": {
+					"type": "Enum",
+					"options" : {
+						"6db/oct" : 0.0,
+						"12db/oct" : 0.3,
+						"18db/oct" : 0.6,
+						"24db/oct" : 1.0, } }, 
+				
+			"Freq (Select)": {
+					"type": "Enum",
+					"options" : {
+						"20" : 0,
+						"30" : 0.136,
+						"40" : 0.22,
+						"45" : 0.26,
+						"50" : 0.29,
+						"55" : 0.32,
+						"60" : 0.34,
+						"65" : 0.36,
+						"70" : 0.395,
+						"80" : 0.43,
+						"90" : 0.465,
+						"100" : 0.501,
+						"120" : 0.56,
+						"140" : 0.61,
+						"160" : 0.643,
+						"180" : 0.68,
+						"200" : 0.72,
+						"220" : 0.745,
+						"240" : 0.77,
+						"260" : 0.8,
+						"280" : 0.82,
+						"300" : 0.84,
+						"320" : 0.86,
+						"360" : 0.9,
+						"400" : 0.933,
+						"440" : 0.96,
+						"500" : 0.999,   } 	}, 			
+		}  },
+			 	
+	 	"Compressor" : {
+			"menu" : "ActiveChMore",
+			"callback" : "SelChComp",
+			"parameters" : {
+				
+			"Out Gain (-30db to +30db)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  },
+					
+			"Attack (0ms to 200ms)": {
+					"type": "Float",
+					"default": 0.1, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  },
+					
+			"Release (0,1s to 1s)": {
+					"type": "Float",
+					"default": 0.1, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+					
+			"Threshold (-60db to 0db)": {
+					"type": "Float",
+					"default": 1, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  },
+					
+			"Ratio (1:1 to 10:1)": {
+					"type": "Float",
+					"default": 0.12, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  },
+					
+			"Exp-Thresh (-100db to -20db)": {
+					"type": "Float",
+					"default": 1, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+					
+			"Exp-Ratio (-100db to -20db)": {
+					"type": "Float",
+					"default": 0.3, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+		}  },
+		
+		
+		"Autolevel" : {
+			"menu" : "ActiveChMore",
+			"callback" : "SelChAutolevel",
+			"parameters" : {
+				
+			"Max Gain (0db to 18db)": {
+					"type": "Float",
+					"default": 0.3, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  },
+					
+			"Headroom (3db to 12db)": {
+					"type": "Float",
+					"default": 6, 
+					"min":3,
+					"max":12,
+					"useForMapping": true  },
+					
+			"Rise Time (0,1s to 9,9s)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true  }, 
+		}  },
+		
+		"Set Layer" : {
+			"menu" : "Layer",
+			"callback" : "set_layer",
+			"parameters" : {
+				"Layer Select" : {
+					"type":"Enum",
+					"options": {
+						"Inputs" : "busInput",
+						"Playbacks" : "busPlayback",
+						"Outputs" : "busOutput" } },	
+		}  },
+		
+		"Submix->Main(1-2)" : {
+			"menu" : "Layer",
+			"callback" : "SubmixMain",
+		},
+		
+		"Submix->Phones(7-8)" : {
+			"menu" : "Layer",
+			"callback" : "SubmixPhones",
+		},
+		
+		"Set Submix" : {
+			"menu" : "Layer",
+			"callback" : "Submix",
+			"parameters" : {
+			
+				"Set Submix": {
+					"type": "Enum",
+					"options" : {
+						"1(Main)" : 0.0,
+						"2(Main)" : 1.0,
+						"3" : 2.0,
+						"4" : 3.0,
+						"5" : 4.0,
+						"6" : 5.0,
+						"7(Phones)" : 6.0,
+						"8(Phones)" : 7.0,
+						"9" : 8.0,
+						"10" : 9.0,
+						"11" : 10.0,
+						"12" : 11.0,
+						"13" : 12.0,
+						"14" : 13.0,
+						"15" : 14.0,
+						"16" : 15.0,
+						"17" : 16.0,
+						"18" : 17.0,
+						"19" : 18.0,
+						"20" : 19.0,  }  }, 
+		}  },
+		
+		"Bank back" : {
+			"menu" : "Layer",
+			"callback" : "BankMoins",
+		},
+				
+		"Bank go" : {
+			"menu" : "Layer",
+			"callback" : "BankPlus",
+		},
+		
+		"Sync" : {
+			"menu" : "Layer",
+			"callback" : "SyncTrigg",
+		},
+		
+		"MuteGroup" : {
+			"menu" : "Groups",
+			"callback" : "Mutegroups",
+			"parameters" : {
+				"Select": {
+					"type": "Enum",
+					"options" : {
+						"MuteGr 1" : 4,
+						"MuteGr 2" : 3,
+						"MuteGr 3" : 2,
+						"MuteGr 4" : 1	}	}, 
+		}	},
+		
+		"SoloGroup" : {
+			"menu" : "Groups",
+			"callback" : "Sologroups",
+			"parameters" : {
+				"Select": {
+					"type": "Enum",
+					"options" : {
+						"SoloGr 1" : 4,
+						"SoloGr 2" : 3,
+						"SoloGr 3" : 2,
+						"SoloGr 4" : 1,  }	}, 
+		}  },
+		
+		"FaderGroup" : {
+			"menu" : "Groups",
+			"callback" : "Fadergroups",
+			"parameters" : {
+				"Select": {
+					"type": "Enum",
+					"options" : {
+						"FaderGr 1" : 4,
+						"FaderGr 2" : 3,
+						"FaderGr 3" : 2,
+						"FaderGr 4" : 1,  } }, 
+		}  },
+	
+		
+		"Reverb-On" : {
+			"menu" : "Reverb",
+			"callback" : "ReverbOn",
+		},
+				
+		"ReverbType" : {
+			"menu" : "Reverb",
+			"callback" : "reverbType",
+			"parameters" : {
+			
+			"Select": {
+					"type": "Enum",
+					"options" : {
+						"Small Room" : 0.0,
+						"Medium Room" : 0.07,
+						"Large Room" : 0.13,
+						"Walls" : 0.2,
+						"Shorty" : 0.49,
+						"Attack" : 0.57,
+						"Swagger" : 0.63,
+						"Old school" : 0.7,
+						"Echoistic" : 0.77,
+						"8Plus9" : 0.84,
+						"Grand Wide" : 0.9,
+						"Thicker" : 0.97,
+						"Envelope" : 0.27,
+						"Gated" : 0.34,
+						"Space" : 0.42	}  },
+		}  },
+		
+		"ReverbPreDel" : {
+			"menu" : "Reverb",
+			"callback" : "reverbPredelay",
+			"parameters" : {
+				"Pre Delay(0-1s)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbDecay" : {
+			"menu" : "Reverb",
+			"callback" : "reverbTime",
+			"parameters" : {
+				"Decay": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbLoCut" : {
+			"menu" : "Reverb",
+			"callback" : "reverbLowcut",
+			"parameters" : {
+				"Lo Cut(20-500Hz)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbHicut" : {
+			"menu" : "Reverb",
+			"callback" : "reverbHighcut",
+			"parameters" : {
+				"Hi Cut(2k-20k)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbRoomScale" : {
+			"menu" : "Reverb",
+			"callback" : "reverbRoomscale",
+			"parameters" : {
+				"Scale(0,5-3)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbAttack" : {
+			"menu" : "Reverb",
+			"callback" : "reverbAttack",
+			"parameters" : {
+				"Attack Time": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"GateRevHold" : {
+			"menu" : "Reverb",
+			"callback" : "reverbHold",
+			"parameters" : {
+				"Hold Time": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"GateRevRelease" : {
+			"menu" : "Reverb",
+			"callback" : "reverbRelease",
+			"parameters" : {
+				"Release Time": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbHidamp" : {
+			"menu" : "Reverb",
+			"callback" : "reverbHighdamp",
+			"parameters" : {
+				"Hi Damp": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbSmooth" : {
+			"menu" : "Reverb",
+			"callback" : "reverbSmooth",
+			"parameters" : {
+				"Smooth": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbWidth" : {
+			"menu" : "Reverb",
+			"callback" : "reverbWidth",
+			"parameters" : {
+				"Width(0-1)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"ReverbVolume" : {
+			"menu" : "Reverb",
+			"callback" : "reverbVolume",
+			"parameters" : {
+				"Level(-70 to +6db)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		
+		
+		
+		"Delay-On" : {
+			"menu" : "Delay",
+			"callback" : "DelayOn",
+		},
+		
+		"DelayType" : {
+			"menu" : "Delay",
+			"callback" : "delayType",
+			"parameters" : {
+			"Select": {
+					"type": "Enum",
+					"options" : {
+						"Stereo Echo" : 0.0,
+						"Stereo Cross" : 0.5,
+						"Pong Echo" : 0.9  }  },
+		}  },
+		
+		"DelayTime" : {
+			"menu" : "Delay",
+			"callback" : "echoDelaytime",
+			"parameters" : {
+				"Time(0-2sec)": {
+					"type": "Float",
+					"default": 0.3, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"DelayFeedback" : {
+			"menu" : "Delay",
+			"callback" : "echoFeedback",
+			"parameters" : {
+				"Feedback(0-100%)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"DelayWidth" : {
+			"menu" : "Delay",
+			"callback" : "echoWidth",
+			"parameters" : {
+				"Width": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		"DelayVolume" : {
+			"menu" : "Delay",
+			"callback" : "echoVolume",
+			"parameters" : {
+				"Level(-70 to +6db)": {
+					"type": "Float",
+					"default": 0, 
+					"min":0,
+					"max":1,
+					"useForMapping": true }, 
+		}  },
+		
+		
+		"Play" : {
+			"menu" : "Player",
+			"callback" : "Play",
+		},
+		
+		
+		"Stop" : {
+			"menu" : "Player",
+			"callback" : "Stop",
+		},
+		
+		"Record" : {
+			"menu" : "Player",
+			"callback" : "Record",
+		},
+		
+		
+		"Time" : {
+			"menu" : "Player",
+			"callback" : "Time",
+		},
+
+		
+	}
+}
