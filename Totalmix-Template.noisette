@@ -1,0 +1,3558 @@
+{
+  "metaData": {
+    "version": "1.9.16",
+    "versionNumber": 67856
+  },
+  "projectSettings": {
+    "containers": {
+      "dashboardSettings": {
+        "parameters": [
+          {
+            "value": "",
+            "controlAddress": "/showDashboardOnStartup",
+            "enabled": false
+          }
+        ]
+      },
+      "customDefinitions": {
+      }
+    }
+  },
+  "dashboardManager": {
+    "parameters": [
+      {
+        "value": false,
+        "controlAddress": "/editMode"
+      },
+      {
+        "value": false,
+        "controlAddress": "/snapping"
+      }
+    ],
+    "items": [
+      {
+        "niceName": "Labels",
+        "type": "BaseItem",
+        "itemManager": {
+          "parameters": [
+            {
+              "value": [
+                500.0,
+                600.0
+              ],
+              "controlAddress": "/canvasSize",
+              "enabled": true
+            },
+            {
+              "value": [
+                0.0,
+                0.0,
+                0.1490196138620377,
+                0.3098039329051971
+              ],
+              "controlAddress": "/backgroundColor"
+            },
+            {
+              "value": "",
+              "controlAddress": "/backgroundImage"
+            }
+          ],
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -178.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    100.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_busPlayback",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Playback Layer",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_busPlayback",
+              "controllable": "/modules/totalmix/values/_2_busPlayback"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -120.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    175.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_labelSubmix",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Activ Submix :",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    1.0,
+                    0.9529411792755127,
+                    0.02745098061859608,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": true
+                },
+                {
+                  "value": 15,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 3",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_labelSubmix",
+              "controllable": "/modules/totalmix/values/_2_labelSubmix"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    19.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname1",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 1",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.7803921699523926,
+                    0.800000011920929,
+                    0.1607843190431595,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": false
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 5",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname1",
+              "controllable": "/modules/totalmix/values/_1_trackname1"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -92.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    175.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_trackname",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Activ Channel",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    1.0,
+                    0.9529411792755127,
+                    0.02745098061859608,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": true
+                },
+                {
+                  "value": 18,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 6",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_trackname",
+              "controllable": "/modules/totalmix/values/_2_trackname"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -154.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    100.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_busOutput",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Output Layer",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 1",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_busOutput",
+              "controllable": "/modules/totalmix/values/_2_busOutput"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -203.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    100.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_busInput",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Input Layer",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 7",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_busInput",
+              "controllable": "/modules/totalmix/values/_2_busInput"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    49.42857360839844
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname2",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 2",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": false
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 8",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname2",
+              "controllable": "/modules/totalmix/values/_1_trackname2"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    79.85713195800781
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname3",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 3",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 9",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname3",
+              "controllable": "/modules/totalmix/values/_1_trackname3"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    110.2857055664062
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname4",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 4",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 10",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname4",
+              "controllable": "/modules/totalmix/values/_1_trackname4"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    138.2142944335938
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    30.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname5",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 5",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 11",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname5",
+              "controllable": "/modules/totalmix/values/_1_trackname5"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    171.1428527832031
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname6",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 6",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 12",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname6",
+              "controllable": "/modules/totalmix/values/_1_trackname6"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    201.5714263916016
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname7",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 7",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 13",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname7",
+              "controllable": "/modules/totalmix/values/_1_trackname7"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    232.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname8",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track 8",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 14",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname8",
+              "controllable": "/modules/totalmix/values/_1_trackname8"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -23.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    30.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/sync/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Update Labels",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.1529411822557449,
+                    0.4392156898975372,
+                    0.125490203499794,
+                    0.3960784375667572
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 4",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/triggLabels/trigger",
+              "controllable": "/modules/totalmix/templates/sync/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -233.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    100.0,
+                    22.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/trigger2/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Update Layers",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 15",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/triggLayers/trigger",
+              "controllable": "/modules/totalmix/templates/trigger2/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -8.0,
+                    -200.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    30.0,
+                    15.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/mixerInputs/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Trig",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.2862745225429535,
+                    0.3686274588108063,
+                    0.2352941185235977,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 16",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/inputLayer/trigger",
+              "controllable": "/modules/totalmix/templates/mixerInputs/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -8.0,
+                    -176.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    30.0,
+                    15.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/mixerPlaybacks/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Trig",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.2862745225429535,
+                    0.3686274588108063,
+                    0.2352941185235977,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 17",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/playbackLayer/trigger",
+              "controllable": "/modules/totalmix/templates/mixerPlaybacks/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -8.0,
+                    -150.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    30.0,
+                    15.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/mixerOutputs/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Trig",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.2862745225429535,
+                    0.3686274588108063,
+                    0.2352941185235977,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 18",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/modules/totalmix/templates/mixerInputs/trigger",
+              "controllable": "/modules/totalmix/templates/mixerOutputs/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -121.0,
+                    -62.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    80.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/trackBack/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "<< Track",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 13,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 19",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/track__/trigger",
+              "controllable": "/modules/totalmix/templates/trackBack/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -119.0,
+                    265.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    120.0,
+                    22.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_labelSubmix",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Mix Sub",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.7843137383460999,
+                    0.7490196228027344,
+                    0.01960784383118153,
+                    1.0
+                  ],
+                  "controlAddress": "/textColor",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 21",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_labelSubmix",
+              "controllable": "/modules/totalmix/values/_1_labelSubmix"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    57.0,
+                    -117.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    35.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/submix__Main_1_2_/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "->Main",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.4901960790157318,
+                    0.3254902064800262,
+                    0.2588235437870026,
+                    1.0
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 23",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/setSub__Main/trigger",
+              "controllable": "/modules/totalmix/templates/submix__Main_1_2_/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -26.0,
+                    -62.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    80.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": false,
+                  "controlAddress": "/locked"
+                },
+                {
+                  "value": "/modules/totalmix/templates/trackGo/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track >>",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 13,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 20",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/modules/totalmix/templates/track_/trigger",
+              "controllable": "/modules/totalmix/templates/trackGo/trigger"
+            }
+          ],
+          "viewOffset": [
+            26,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "niceName": "MixNames",
+        "type": "BaseItem",
+        "itemManager": {
+          "parameters": [
+            {
+              "value": [
+                400.0,
+                500.0
+              ],
+              "controlAddress": "/canvasSize",
+              "enabled": true
+            },
+            {
+              "value": [
+                0.1921568661928177,
+                0.1137254908680916,
+                0.0,
+                0.2549019753932953
+              ],
+              "controlAddress": "/backgroundColor"
+            },
+            {
+              "value": "",
+              "controlAddress": "/backgroundImage"
+            },
+            {
+              "value": 14,
+              "hexMode": false,
+              "controlAddress": "/snapGridSize"
+            }
+          ],
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    -91.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname1",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track1",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname1",
+              "controllable": "/modules/totalmix/values/_1_trackname1"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    -62.85714721679688
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname2",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track2",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    1.0
+                  ],
+                  "controlAddress": "/borderColor",
+                  "enabled": false
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 1",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname2",
+              "controllable": "/modules/totalmix/values/_1_trackname2"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    -34.71429443359375
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname3",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track3",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 2",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname3",
+              "controllable": "/modules/totalmix/values/_1_trackname3"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    -6.571434020996094
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname4",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track4",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 3",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname4",
+              "controllable": "/modules/totalmix/values/_1_trackname4"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    21.57142639160156
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname5",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track5",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 4",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname5",
+              "controllable": "/modules/totalmix/values/_1_trackname5"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    49.71427917480469
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname6",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track6",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 5",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname6",
+              "controllable": "/modules/totalmix/values/_1_trackname6"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    77.85714721679688
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname7",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track7",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 6",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname7",
+              "controllable": "/modules/totalmix/values/_1_trackname7"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    106.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_trackname8",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track8",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 7",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_trackname8",
+              "controllable": "/modules/totalmix/values/_1_trackname8"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    -126.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    25.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_labelSubmix",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Active Submix",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    1.0
+                  ],
+                  "controlAddress": "/borderColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 8",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/totalmix/values/_1_labelSubmix",
+              "controllable": "/modules/totalmix/values/_2_labelSubmix"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -32.14999389648438,
+                    -151.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    60.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_busInput",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Inputs",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 12,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    1.0
+                  ],
+                  "controlAddress": "/borderColor",
+                  "enabled": false
+                },
+                {
+                  "value": 1.0,
+                  "controlAddress": "/borderWidth"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 9",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_busInput",
+              "controllable": "/modules/totalmix/values/_1_busInput"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    106.0,
+                    -151.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    70.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_busOutput",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Outputs",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 12,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    1.0
+                  ],
+                  "controlAddress": "/borderColor",
+                  "enabled": false
+                },
+                {
+                  "value": 1.0,
+                  "controlAddress": "/borderWidth"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 10",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_busOutput",
+              "controllable": "/modules/totalmix/values/_1_busOutput"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    32.0,
+                    -151.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    70.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_1_busPlayback",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Playbacks",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 12,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    0.3803921639919281,
+                    1.0
+                  ],
+                  "controlAddress": "/borderColor",
+                  "enabled": false
+                },
+                {
+                  "value": 1.0,
+                  "controlAddress": "/borderWidth"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 11",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_1_busPlayback",
+              "controllable": "/modules/totalmix/values/_1_busPlayback"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    16.0,
+                    -188.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    140.0,
+                    23.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "Mixer (Page 1-OSC)",
+                  "controlAddress": "/text"
+                },
+                {
+                  "value": 15.0,
+                  "customUI": 3,
+                  "controlAddress": "/size"
+                }
+              ],
+              "niceName": "Comment",
+              "hideInEditor": true,
+              "type": "DashboardCommentItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    143.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    30.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/sync/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Update Labels+Layer",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 15,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.125490203499794,
+                    0.2431372553110123,
+                    0.0784313753247261,
+                    0.6117647290229797
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 12",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/triggLabels/trigger",
+              "controllable": "/modules/totalmix/templates/sync/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -27.0,
+                    184.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    95.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/bankBack/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Bank -",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.4666666686534882,
+                    0.5137255191802979,
+                    0.0784313753247261,
+                    0.6549019813537598
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 13",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/bank_/trigger",
+              "controllable": "/modules/totalmix/templates/bankBack/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    78.0,
+                    184.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    95.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/bankGo/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Bank +",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.4666666686534882,
+                    0.5137255191802979,
+                    0.0784313753247261,
+                    0.6549019813537598
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 14",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/bank_/trigger",
+              "controllable": "/modules/totalmix/templates/bankGo/trigger"
+            }
+          ],
+          "viewOffset": [
+            -69,
+            -8
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "niceName": "SelChannel",
+        "type": "BaseItem",
+        "itemManager": {
+          "parameters": [
+            {
+              "value": [
+                500.0,
+                500.0
+              ],
+              "controlAddress": "/canvasSize",
+              "enabled": true
+            },
+            {
+              "value": [
+                0.2039215713739395,
+                0.4117647111415863,
+                0.1176470592617989,
+                0.2470588237047195
+              ],
+              "controlAddress": "/backgroundColor"
+            },
+            {
+              "value": "",
+              "controlAddress": "/backgroundImage"
+            },
+            {
+              "value": 1.086086988449097,
+              "controlAddress": "/backgroundImageScale"
+            },
+            {
+              "value": true,
+              "controlAddress": "/snapGridMode"
+            },
+            {
+              "value": 10,
+              "hexMode": false,
+              "controlAddress": "/snapGridSize"
+            }
+          ],
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -1074.0,
+                    -272.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    40.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "",
+                  "ghostValue": "/modules/osc/listSize",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Default",
+                  "controlAddress": "/style"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 3",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/listSize"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -161.0,
+                    -89.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    35.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_trackname",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Active Channel",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": 1.0,
+                  "controlAddress": "/borderWidth"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_trackname",
+              "controllable": "/modules/totalmix/values/_2_trackname"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -161.0,
+                    -43.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    200.0,
+                    35.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_labelSubmix",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Active Submix",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 16,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": 1.0,
+                  "controlAddress": "/borderWidth"
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 2",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_labelSubmix",
+              "controllable": "/modules/totalmix/values/_2_labelSubmix"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -41.0,
+                    -168.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    80.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_busInput",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Inputs",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 1",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_busInput",
+              "controllable": "/modules/totalmix/values/_2_busInput"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -41.0,
+                    -145.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    80.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_busPlayback",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Playbacks",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 4",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_busPlayback",
+              "controllable": "/modules/totalmix/values/_2_busPlayback"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -41.0,
+                    -122.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    80.0,
+                    20.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/values/_2_busOutput",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Outputs",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/toggleImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 5",
+              "hideInEditor": true,
+              "type": "DashboardParameterItem",
+              "ghostAddress": "/modules/osc/values/_2_busOutput",
+              "controllable": "/modules/totalmix/values/_2_busOutput"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -154.0,
+                    -146.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    90.0,
+                    22.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "Active Layer :",
+                  "controlAddress": "/text"
+                }
+              ],
+              "niceName": "Comment",
+              "hideInEditor": true,
+              "type": "DashboardCommentItem"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    50.0,
+                    -165.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    30.0,
+                    15.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/mixerInputs/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Trig",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.4980392158031464,
+                    0.6901960968971252,
+                    0.1607843190431595,
+                    0.6705882549285889
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 6",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/inputLayer/trigger",
+              "controllable": "/modules/totalmix/templates/mixerInputs/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    50.0,
+                    -141.5
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    30.0,
+                    15.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/mixerPlaybacks/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Trig",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.4980392158031464,
+                    0.6901960968971252,
+                    0.1607843190431595,
+                    0.6705882549285889
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 7",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/playbackLayer/trigger",
+              "controllable": "/modules/totalmix/templates/mixerPlaybacks/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    50.0,
+                    -118.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    30.0,
+                    15.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/mixerOutputs/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Trig",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.4980392158031464,
+                    0.6901960968971252,
+                    0.1607843190431595,
+                    0.6705882549285889
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 8",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/outputLayer/trigger",
+              "controllable": "/modules/totalmix/templates/mixerOutputs/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -161.0,
+                    11.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    95.0,
+                    30.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/trackBack/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "<< Track",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.1137254908680916,
+                    0.1843137294054031,
+                    0.3019607961177826,
+                    0.6705882549285889
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 9",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/track__/trigger",
+              "controllable": "/modules/totalmix/templates/trackBack/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -56.0,
+                    11.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    95.0,
+                    30.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "/modules/totalmix/templates/trackGo/trigger",
+                  "controlAddress": "/target"
+                },
+                {
+                  "value": "Track >>",
+                  "controlAddress": "/customText",
+                  "enabled": true
+                },
+                {
+                  "value": 14,
+                  "hexMode": false,
+                  "controlAddress": "/textSize",
+                  "enabled": true
+                },
+                {
+                  "value": [
+                    0.1137254908680916,
+                    0.1843137294054031,
+                    0.3019607961177826,
+                    0.6705882549285889
+                  ],
+                  "controlAddress": "/backgroundColor",
+                  "enabled": true
+                },
+                {
+                  "value": "",
+                  "controlAddress": "/customImage",
+                  "enabled": false
+                }
+              ],
+              "niceName": "Item 10",
+              "hideInEditor": true,
+              "type": "DashboardTriggerItem",
+              "ghostAddress": "/states/dashboardBasics/processors/__Track/trigger",
+              "controllable": "/modules/totalmix/templates/trackGo/trigger"
+            },
+            {
+              "parameters": [
+                {
+                  "value": [
+                    -125.0,
+                    -228.0
+                  ],
+                  "controlAddress": "/viewUIPosition"
+                },
+                {
+                  "value": [
+                    210.0,
+                    23.0
+                  ],
+                  "controlAddress": "/viewUISize"
+                },
+                {
+                  "value": "Selected Channel (Page2 - OSC)",
+                  "controlAddress": "/text"
+                },
+                {
+                  "value": 15.0,
+                  "customUI": 3,
+                  "controlAddress": "/size"
+                }
+              ],
+              "niceName": "Comment 1",
+              "hideInEditor": true,
+              "type": "DashboardCommentItem"
+            }
+          ],
+          "viewOffset": [
+            35,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "editing": true
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "parrots": {
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "layout": {
+    "mainLayout": {
+      "type": 1,
+      "width": 1674,
+      "height": 955,
+      "direction": 2,
+      "shifters": [
+        {
+          "type": 1,
+          "width": 1674,
+          "height": 955,
+          "direction": 1,
+          "shifters": [
+            {
+              "type": 1,
+              "width": 255,
+              "height": 955,
+              "direction": 2,
+              "shifters": [
+                {
+                  "type": 0,
+                  "width": 255,
+                  "height": 163,
+                  "currentContent": "Modules",
+                  "tabs": [
+                    {
+                      "name": "Modules"
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 255,
+                  "height": 786,
+                  "currentContent": "Dashboard",
+                  "tabs": [
+                    {
+                      "name": "Dashboard"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": 1,
+              "width": 1413,
+              "height": 955,
+              "direction": 2,
+              "shifters": [
+                {
+                  "type": 1,
+                  "width": 1413,
+                  "height": 804,
+                  "direction": 1,
+                  "shifters": [
+                    {
+                      "type": 0,
+                      "width": 1002,
+                      "height": 804,
+                      "currentContent": "State Machine",
+                      "tabs": [
+                        {
+                          "name": "State Machine"
+                        },
+                        {
+                          "name": "Module Router"
+                        },
+                        {
+                          "name": "Morpher"
+                        },
+                        {
+                          "name": "Warnings"
+                        },
+                        {
+                          "name": "Outliner"
+                        }
+                      ]
+                    },
+                    {
+                      "type": 0,
+                      "width": 405,
+                      "height": 804,
+                      "currentContent": "Inspector",
+                      "tabs": [
+                        {
+                          "name": "Inspector"
+                        },
+                        {
+                          "name": "Help"
+                        },
+                        {
+                          "name": "Logger"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": 0,
+                  "width": 1413,
+                  "height": 145,
+                  "currentContent": "Sequence Editor",
+                  "tabs": [
+                    {
+                      "name": "Sequences"
+                    },
+                    {
+                      "name": "Sequence Editor"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "windows": null
+  },
+  "modules": {
+    "items": [
+      {
+        "niceName": "Totalmix",
+        "type": "Totalmix",
+        "scripts": {
+          "items": [
+            {
+              "niceName": "Totalmix",
+              "editorIsCollapsed": true,
+              "type": "BaseItem",
+              "scriptParams": {
+                "hideInEditor": true
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": false,
+              "controlAddress": "/autoAdd"
+            },
+            {
+              "value": true,
+              "controlAddress": "/autoFeedback"
+            }
+          ],
+          "containers": {
+            "oscInput": {
+              "parameters": [
+                {
+                  "value": 9000,
+                  "hexMode": false,
+                  "controlAddress": "/localPort"
+                }
+              ]
+            },
+            "oscOutputs": {
+              "items": [
+                {
+                  "parameters": [
+                    {
+                      "value": false,
+                      "controlAddress": "/local"
+                    },
+                    {
+                      "value": "127.0.0.1",
+                      "controlAddress": "/remoteHost"
+                    },
+                    {
+                      "value": 8000,
+                      "hexMode": false,
+                      "controlAddress": "/remotePort"
+                    }
+                  ],
+                  "niceName": "OSC Output",
+                  "type": "BaseItem"
+                }
+              ],
+              "viewOffset": [
+                0,
+                0
+              ],
+              "viewZoom": 1.0
+            },
+            "pass_through": {
+              "editorIsCollapsed": true
+            }
+          }
+        },
+        "templates": {
+          "items": [
+            {
+              "niceName": "Mixer Inputs",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Set Layer",
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "Inputs",
+                      "controlAddress": "/layerSelect"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Layer Select"
+                }
+              ]
+            },
+            {
+              "niceName": "Mixer Playbacks",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Set Layer",
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "Playbacks",
+                      "controlAddress": "/layerSelect"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Layer Select"
+                }
+              ]
+            },
+            {
+              "niceName": "Mixer Outputs",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Set Layer",
+              "params": [
+                {
+                  "parameters": [
+                    {
+                      "value": "Outputs",
+                      "controlAddress": "/layerSelect"
+                    },
+                    {
+                      "value": false,
+                      "minValue": 0,
+                      "maxValue": 1,
+                      "default": true,
+                      "controlAddress": "/editable",
+                      "type": "Boolean",
+                      "niceName": "Editable",
+                      "customizable": false,
+                      "removable": false,
+                      "description": "If enabled, the parameter will be editable when instantiating this template",
+                      "hideInEditor": false,
+                      "feedbackOnly": false
+                    }
+                  ],
+                  "niceName": "Layer Select"
+                }
+              ]
+            },
+            {
+              "niceName": "Sync",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Sync",
+              "params": null
+            },
+            {
+              "niceName": "Submix->Main(1-2)",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Submix->Main(1-2)",
+              "params": null
+            },
+            {
+              "niceName": "Trigger2",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "ActiveChannel",
+              "commandType": "Trigger2",
+              "params": null
+            },
+            {
+              "niceName": "Track back",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "ActiveChannel",
+              "commandType": "Track back",
+              "params": null
+            },
+            {
+              "niceName": "Track go",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "ActiveChannel",
+              "commandType": "Track go",
+              "params": null
+            },
+            {
+              "niceName": "Bank back",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Bank back",
+              "params": null
+            },
+            {
+              "niceName": "Bank go",
+              "editorIsCollapsed": true,
+              "type": "CommandTemplate",
+              "menuPath": "Layer",
+              "commandType": "Bank go",
+              "params": null
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "parameters": [
+            {
+              "value": "Main",
+              "alwaysNotify": true,
+              "controlAddress": "/_1_trackname1",
+              "type": "String",
+              "niceName": "/1/trackname1",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "OUT3",
+              "alwaysNotify": true,
+              "controlAddress": "/_1_trackname2",
+              "type": "String",
+              "niceName": "/1/trackname2",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "OUT4",
+              "controlAddress": "/_1_trackname3",
+              "type": "String",
+              "niceName": "/1/trackname3",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "OUT 5/6",
+              "controlAddress": "/_1_trackname4",
+              "type": "String",
+              "niceName": "/1/trackname4",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "Phones",
+              "controlAddress": "/_1_trackname5",
+              "type": "String",
+              "niceName": "/1/trackname5",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "SPDIF",
+              "controlAddress": "/_1_trackname6",
+              "type": "String",
+              "niceName": "/1/trackname6",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "n.a.",
+              "controlAddress": "/_1_trackname7",
+              "type": "String",
+              "niceName": "/1/trackname7",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "n.a.",
+              "controlAddress": "/_1_trackname8",
+              "type": "String",
+              "niceName": "/1/trackname8",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": false,
+              "minValue": 0,
+              "maxValue": 1,
+              "default": false,
+              "controlAddress": "/_1_busInput",
+              "type": "Boolean",
+              "niceName": "/1/busInput",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": false,
+              "minValue": 0,
+              "maxValue": 1,
+              "default": false,
+              "controlAddress": "/_1_busPlayback",
+              "type": "Boolean",
+              "niceName": "/1/busPlayback",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": true,
+              "minValue": 0,
+              "maxValue": 1,
+              "default": false,
+              "controlAddress": "/_1_busOutput",
+              "type": "Boolean",
+              "niceName": "/1/busOutput",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": false,
+              "minValue": 0,
+              "maxValue": 1,
+              "default": false,
+              "controlAddress": "/_2_busInput",
+              "type": "Boolean",
+              "niceName": "/2/busInput",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": false,
+              "minValue": 0,
+              "maxValue": 1,
+              "default": false,
+              "controlAddress": "/_2_busPlayback",
+              "type": "Boolean",
+              "niceName": "/2/busPlayback",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": true,
+              "minValue": 0,
+              "maxValue": 1,
+              "default": false,
+              "controlAddress": "/_2_busOutput",
+              "type": "Boolean",
+              "niceName": "/2/busOutput",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "Main",
+              "controlAddress": "/_2_trackname",
+              "type": "String",
+              "niceName": "/2/trackname",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "OUT3",
+              "controlAddress": "/_2_labelSubmix",
+              "type": "String",
+              "niceName": "/2/labelSubmix",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": "OUT3",
+              "controlAddress": "/_1_labelSubmix",
+              "type": "String",
+              "niceName": "/1/labelSubmix",
+              "customizable": true,
+              "removable": true,
+              "description": "",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            }
+          ],
+          "editorIsCollapsed": true,
+          "containers": {
+            "trackNames": {
+            }
+          }
+        }
+      },
+      {
+        "niceName": "MIDI",
+        "type": "MIDI",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": false,
+              "controlAddress": "/autoAdd"
+            },
+            {
+              "value": [
+                "",
+                ""
+              ],
+              "controlAddress": "/devices"
+            }
+          ],
+          "containers": {
+            "pass_through": {
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "parameters": [
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 36,
+              "MIDIType": 0,
+              "controlAddress": "/_1_C1",
+              "type": "MIDI Value",
+              "niceName": "[1] C1",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : C1",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 37,
+              "MIDIType": 0,
+              "controlAddress": "/_1_C#1",
+              "type": "MIDI Value",
+              "niceName": "[1] C#1",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : C#1",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 38,
+              "MIDIType": 0,
+              "controlAddress": "/_1_D1",
+              "type": "MIDI Value",
+              "niceName": "[1] D1",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : D1",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 39,
+              "MIDIType": 0,
+              "controlAddress": "/_1_D#1",
+              "type": "MIDI Value",
+              "niceName": "[1] D#1",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : D#1",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 0,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC0",
+              "type": "MIDI Value",
+              "niceName": "[1] CC0",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC0",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 1,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC1",
+              "type": "MIDI Value",
+              "niceName": "[1] CC1",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC1",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 2,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC2",
+              "type": "MIDI Value",
+              "niceName": "[1] CC2",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC2",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 4,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC4",
+              "type": "MIDI Value",
+              "niceName": "[1] CC4",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC4",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 5,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC5",
+              "type": "MIDI Value",
+              "niceName": "[1] CC5",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC5",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 6,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC6",
+              "type": "MIDI Value",
+              "niceName": "[1] CC6",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC6",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 16,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC16",
+              "type": "MIDI Value",
+              "niceName": "[1] CC16",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC16",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 48,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC48",
+              "type": "MIDI Value",
+              "niceName": "[1] CC48",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC48",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 64,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC64",
+              "type": "MIDI Value",
+              "niceName": "[1] CC64",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC64",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            }
+          ],
+          "containers": {
+            "infos": {
+              "parameters": [
+                {
+                  "value": 38,
+                  "hexMode": false,
+                  "controlAddress": "/lastPitch"
+                },
+                {
+                  "value": 1,
+                  "hexMode": false,
+                  "controlAddress": "/lastVelocity"
+                }
+              ]
+            },
+            "tempo": {
+            },
+            "mtc": {
+            }
+          }
+        }
+      },
+      {
+        "niceName": "Sound Card",
+        "type": "Sound Card",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "containers": {
+            "inputVolumes": {
+            },
+            "outputVolumes": {
+              "editorIsCollapsed": true
+            },
+            "monitor": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ]
+            },
+            "fftAnalysis": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ],
+              "editorIsCollapsed": true,
+              "viewOffset": [
+                0,
+                0
+              ],
+              "viewZoom": 1.0
+            },
+            "ltc": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/enabled"
+                }
+              ]
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "audioSettings": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<DEVICESETUP deviceType=\"CoreAudio\" audioOutputDeviceName=\"Fireface UCX (23456051)\"\r\n             audioInputDeviceName=\"Fireface UCX (23456051)\" audioDeviceRate=\"48000.0\"\r\n             audioDeviceBufferSize=\"64\" audioDeviceInChans=\"11\"/>\r\n",
+        "analyzer": {
+          "parameters": [
+            {
+              "value": false,
+              "controlAddress": "/enabled"
+            }
+          ],
+          "editorIsCollapsed": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "customVariables": {
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "states": {
+    "parameters": [
+      {
+        "value": true,
+        "controlAddress": "/snapGridMode"
+      },
+      {
+        "value": true,
+        "controlAddress": "/showSnapGrid"
+      }
+    ],
+    "viewOffset": [
+      -26,
+      -174
+    ],
+    "viewZoom": 1.0,
+    "transitions": {
+      "hideInEditor": true,
+      "viewOffset": [
+        0,
+        0
+      ],
+      "viewZoom": 1.0
+    },
+    "comments": {
+      "hideInEditor": true,
+      "viewOffset": [
+        -26,
+        -174
+      ],
+      "viewZoom": 1.0
+    }
+  },
+  "sequences": {
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": 222.46,
+            "controlAddress": "/totalTime"
+          },
+          {
+            "value": true,
+            "controlAddress": "/loop"
+          },
+          {
+            "value": 115.5385818481445,
+            "controlAddress": "/viewEndTime"
+          },
+          {
+            "value": "",
+            "controlAddress": "/ltcSyncModule",
+            "enabled": false
+          }
+        ],
+        "niceName": "Sequence",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "editing": true
+      }
+    ],
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  },
+  "routers": {
+    "viewOffset": [
+      0,
+      0
+    ],
+    "viewZoom": 1.0
+  }
+}
