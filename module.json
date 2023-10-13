@@ -45,35 +45,35 @@
 			},
 			"Track1":
 			{ "type":"String",
-				"description":"Actual scene index is two integers split by a dot.\n"
+				"description":"texte"
 			},
 			"Track2":
 			{ "type":"String",
-				"description":"As specified in d&b R1.\n"
+				"description":"texte"
 			},
 			"Track3":
 			{ "type":"String",
-				"description":"As specified in d&b R1.\n"
+				"description":"texte"
 			},
 			"Track4":
 			{ "type":"String",
-				"description":"Actual scene index is two integers split by a dot.\n"
+				"description":"texte"
 			},
 			"Track5":
 			{ "type":"String",
-				"description":"As specified in d&b R1.\n"
+				"description":"texte"
 			},
 			"Track6":
 			{ "type":"String",
-				"description":"As specified in d&b R1.\n"
+				"description":"texte"
 			},
 			"Track7":
 			{ "type":"String",
-				"description":"Actual scene index is two integers split by a dot.\n"
+				"description":"texte"
 			},
 			"Track8":
 			{ "type":"String",
-				"description":"As specified in d&b R1.\n"
+				"description":"texte"
 			}
 		},
 		
