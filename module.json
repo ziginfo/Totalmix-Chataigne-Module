@@ -5,7 +5,7 @@
   
   "version":"2.0",
   "description":"Allow you to control RME-Totalmix with chataigne",
-  "url":"",
+  "url":"https://github.com/ziginfo/Totalmix-Chataigne-Module",
   "downloadURL":"",
 	
 	"hasInput": true,
