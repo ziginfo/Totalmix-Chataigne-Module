@@ -1054,10 +1054,6 @@
                   "controlAddress": "/viewUISize"
                 },
                 {
-                  "value": false,
-                  "controlAddress": "/locked"
-                },
-                {
                   "value": "/modules/totalmix/templates/trackGo/trigger",
                   "controlAddress": "/target"
                 },
@@ -1090,7 +1086,8 @@
             0
           ],
           "viewZoom": 1.0
-        }
+        },
+        "editing": true
       },
       {
         "niceName": "MixNames",
@@ -2508,8 +2505,7 @@
             0
           ],
           "viewZoom": 1.0
-        },
-        "editing": true
+        }
       }
     ],
     "viewOffset": [
@@ -2540,14 +2536,14 @@
           "shifters": [
             {
               "type": 1,
-              "width": 255,
+              "width": 343,
               "height": 955,
               "direction": 2,
               "shifters": [
                 {
                   "type": 0,
-                  "width": 255,
-                  "height": 163,
+                  "width": 343,
+                  "height": 110,
                   "currentContent": "Modules",
                   "tabs": [
                     {
@@ -2557,8 +2553,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 255,
-                  "height": 786,
+                  "width": 343,
+                  "height": 839,
                   "currentContent": "Dashboard",
                   "tabs": [
                     {
@@ -2570,19 +2566,19 @@
             },
             {
               "type": 1,
-              "width": 1413,
+              "width": 1325,
               "height": 955,
               "direction": 2,
               "shifters": [
                 {
                   "type": 1,
-                  "width": 1413,
+                  "width": 1325,
                   "height": 804,
                   "direction": 1,
                   "shifters": [
                     {
                       "type": 0,
-                      "width": 1002,
+                      "width": 914,
                       "height": 804,
                       "currentContent": "State Machine",
                       "tabs": [
@@ -2624,7 +2620,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 1413,
+                  "width": 1325,
                   "height": 145,
                   "currentContent": "Sequence Editor",
                   "tabs": [
@@ -2721,6 +2717,7 @@
           }
         },
         "templates": {
+          "editorIsCollapsed": true,
           "items": [
             {
               "niceName": "Mixer Inputs",
@@ -2884,7 +2881,7 @@
         "values": {
           "parameters": [
             {
-              "value": "Main",
+              "value": "Mic 1",
               "alwaysNotify": true,
               "controlAddress": "/_1_trackname1",
               "type": "String",
@@ -2896,7 +2893,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "OUT3",
+              "value": "Mic 2",
               "alwaysNotify": true,
               "controlAddress": "/_1_trackname2",
               "type": "String",
@@ -2908,7 +2905,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "OUT4",
+              "value": "Inst 3",
               "controlAddress": "/_1_trackname3",
               "type": "String",
               "niceName": "/1/trackname3",
@@ -2919,7 +2916,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "OUT 5/6",
+              "value": "Inst 4",
               "controlAddress": "/_1_trackname4",
               "type": "String",
               "niceName": "/1/trackname4",
@@ -2930,7 +2927,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Phones",
+              "value": "Line 5/6",
               "controlAddress": "/_1_trackname5",
               "type": "String",
               "niceName": "/1/trackname5",
@@ -2941,7 +2938,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "SPDIF",
+              "value": "Line 7/8",
               "controlAddress": "/_1_trackname6",
               "type": "String",
               "niceName": "/1/trackname6",
@@ -2974,7 +2971,7 @@
               "feedbackOnly": false
             },
             {
-              "value": false,
+              "value": true,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -2988,7 +2985,6 @@
               "feedbackOnly": false
             },
             {
-              "value": false,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3002,7 +2998,6 @@
               "feedbackOnly": false
             },
             {
-              "value": true,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3016,7 +3011,7 @@
               "feedbackOnly": false
             },
             {
-              "value": false,
+              "value": true,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3030,7 +3025,6 @@
               "feedbackOnly": false
             },
             {
-              "value": false,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3044,7 +3038,6 @@
               "feedbackOnly": false
             },
             {
-              "value": true,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3058,7 +3051,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Main",
+              "value": "Mic 1",
               "controlAddress": "/_2_trackname",
               "type": "String",
               "niceName": "/2/trackname",
@@ -3069,7 +3062,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "OUT3",
+              "value": "Main",
               "controlAddress": "/_2_labelSubmix",
               "type": "String",
               "niceName": "/2/labelSubmix",
@@ -3080,7 +3073,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "OUT3",
+              "value": "Main",
               "controlAddress": "/_1_labelSubmix",
               "type": "String",
               "niceName": "/1/labelSubmix",
@@ -3091,365 +3084,10 @@
               "feedbackOnly": false
             }
           ],
-          "editorIsCollapsed": true,
           "containers": {
             "trackNames": {
             }
           }
-        }
-      },
-      {
-        "niceName": "MIDI",
-        "type": "MIDI",
-        "scripts": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "params": {
-          "parameters": [
-            {
-              "value": false,
-              "controlAddress": "/autoAdd"
-            },
-            {
-              "value": [
-                "",
-                ""
-              ],
-              "controlAddress": "/devices"
-            }
-          ],
-          "containers": {
-            "pass_through": {
-            }
-          }
-        },
-        "templates": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "values": {
-          "parameters": [
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 36,
-              "MIDIType": 0,
-              "controlAddress": "/_1_C1",
-              "type": "MIDI Value",
-              "niceName": "[1] C1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : C1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 37,
-              "MIDIType": 0,
-              "controlAddress": "/_1_C#1",
-              "type": "MIDI Value",
-              "niceName": "[1] C#1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : C#1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 38,
-              "MIDIType": 0,
-              "controlAddress": "/_1_D1",
-              "type": "MIDI Value",
-              "niceName": "[1] D1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : D1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 39,
-              "MIDIType": 0,
-              "controlAddress": "/_1_D#1",
-              "type": "MIDI Value",
-              "niceName": "[1] D#1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : D#1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 0,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC0",
-              "type": "MIDI Value",
-              "niceName": "[1] CC0",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC0",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 1,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC1",
-              "type": "MIDI Value",
-              "niceName": "[1] CC1",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC1",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 2,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC2",
-              "type": "MIDI Value",
-              "niceName": "[1] CC2",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC2",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 4,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC4",
-              "type": "MIDI Value",
-              "niceName": "[1] CC4",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC4",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 5,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC5",
-              "type": "MIDI Value",
-              "niceName": "[1] CC5",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC5",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 6,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC6",
-              "type": "MIDI Value",
-              "niceName": "[1] CC6",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC6",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 16,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC16",
-              "type": "MIDI Value",
-              "niceName": "[1] CC16",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC16",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 48,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC48",
-              "type": "MIDI Value",
-              "niceName": "[1] CC48",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC48",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            },
-            {
-              "minValue": 0,
-              "maxValue": 127,
-              "default": 0,
-              "hexMode": false,
-              "channel": 1,
-              "pitchOrNumber": 64,
-              "MIDIType": 2,
-              "controlAddress": "/_1_CC64",
-              "type": "MIDI Value",
-              "niceName": "[1] CC64",
-              "customizable": false,
-              "removable": true,
-              "description": "Channel 1 : CC64",
-              "hideInEditor": false,
-              "feedbackOnly": false
-            }
-          ],
-          "containers": {
-            "infos": {
-              "parameters": [
-                {
-                  "value": 38,
-                  "hexMode": false,
-                  "controlAddress": "/lastPitch"
-                },
-                {
-                  "value": 1,
-                  "hexMode": false,
-                  "controlAddress": "/lastVelocity"
-                }
-              ]
-            },
-            "tempo": {
-            },
-            "mtc": {
-            }
-          }
-        }
-      },
-      {
-        "niceName": "Sound Card",
-        "type": "Sound Card",
-        "scripts": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "params": {
-          "containers": {
-            "inputVolumes": {
-            },
-            "outputVolumes": {
-              "editorIsCollapsed": true
-            },
-            "monitor": {
-              "parameters": [
-                {
-                  "value": false,
-                  "controlAddress": "/enabled"
-                }
-              ]
-            },
-            "fftAnalysis": {
-              "parameters": [
-                {
-                  "value": false,
-                  "controlAddress": "/enabled"
-                }
-              ],
-              "editorIsCollapsed": true,
-              "viewOffset": [
-                0,
-                0
-              ],
-              "viewZoom": 1.0
-            },
-            "ltc": {
-              "parameters": [
-                {
-                  "value": false,
-                  "controlAddress": "/enabled"
-                }
-              ]
-            }
-          }
-        },
-        "templates": {
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "audioSettings": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<DEVICESETUP deviceType=\"CoreAudio\" audioOutputDeviceName=\"Fireface UCX (23456051)\"\r\n             audioInputDeviceName=\"Fireface UCX (23456051)\" audioDeviceRate=\"48000.0\"\r\n             audioDeviceBufferSize=\"64\" audioDeviceInChans=\"11\"/>\r\n",
-        "analyzer": {
-          "parameters": [
-            {
-              "value": false,
-              "controlAddress": "/enabled"
-            }
-          ],
-          "editorIsCollapsed": true,
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
         }
       }
     ],
