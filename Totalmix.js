@@ -1,6 +1,5 @@
-// init + container
-
-//receive Names
+// this script is based on the official OSC-Chart for Totalmix published by RME-Audio
+//  http://www.rme-audio.de/downloads/osc_table_totalmix_new.zip
 
 function update(deltaTime) {
 	var now = util.getTime();
