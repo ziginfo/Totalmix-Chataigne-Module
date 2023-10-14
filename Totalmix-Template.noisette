@@ -1083,7 +1083,7 @@
           ],
           "viewOffset": [
             26,
-            0
+            -49
           ],
           "viewZoom": 1.0
         },
@@ -2524,25 +2524,25 @@
   "layout": {
     "mainLayout": {
       "type": 1,
-      "width": 1674,
-      "height": 955,
+      "width": 1700,
+      "height": 914,
       "direction": 2,
       "shifters": [
         {
           "type": 1,
-          "width": 1674,
-          "height": 955,
+          "width": 1700,
+          "height": 914,
           "direction": 1,
           "shifters": [
             {
               "type": 1,
-              "width": 343,
-              "height": 955,
+              "width": 356,
+              "height": 914,
               "direction": 2,
               "shifters": [
                 {
                   "type": 0,
-                  "width": 343,
+                  "width": 356,
                   "height": 110,
                   "currentContent": "Modules",
                   "tabs": [
@@ -2553,8 +2553,8 @@
                 },
                 {
                   "type": 0,
-                  "width": 343,
-                  "height": 839,
+                  "width": 356,
+                  "height": 798,
                   "currentContent": "Dashboard",
                   "tabs": [
                     {
@@ -2566,19 +2566,19 @@
             },
             {
               "type": 1,
-              "width": 1325,
-              "height": 955,
+              "width": 1338,
+              "height": 914,
               "direction": 2,
               "shifters": [
                 {
                   "type": 1,
-                  "width": 1325,
+                  "width": 1338,
                   "height": 804,
                   "direction": 1,
                   "shifters": [
                     {
                       "type": 0,
-                      "width": 914,
+                      "width": 927,
                       "height": 804,
                       "currentContent": "State Machine",
                       "tabs": [
@@ -2620,9 +2620,9 @@
                 },
                 {
                   "type": 0,
-                  "width": 1325,
-                  "height": 145,
-                  "currentContent": "Sequence Editor",
+                  "width": 1338,
+                  "height": 104,
+                  "currentContent": "Sequences",
                   "tabs": [
                     {
                       "name": "Sequences"
@@ -2881,7 +2881,7 @@
         "values": {
           "parameters": [
             {
-              "value": "Mic 1",
+              "value": "AN 1/2",
               "alwaysNotify": true,
               "controlAddress": "/_1_trackname1",
               "type": "String",
@@ -2893,7 +2893,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Mic 2",
+              "value": "AN 3",
               "alwaysNotify": true,
               "controlAddress": "/_1_trackname2",
               "type": "String",
@@ -2905,7 +2905,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Inst 3",
+              "value": "AN 4",
               "controlAddress": "/_1_trackname3",
               "type": "String",
               "niceName": "/1/trackname3",
@@ -2916,7 +2916,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Inst 4",
+              "value": "n.a.",
               "controlAddress": "/_1_trackname4",
               "type": "String",
               "niceName": "/1/trackname4",
@@ -2927,7 +2927,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Line 5/6",
+              "value": "n.a.",
               "controlAddress": "/_1_trackname5",
               "type": "String",
               "niceName": "/1/trackname5",
@@ -2938,7 +2938,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Line 7/8",
+              "value": "n.a.",
               "controlAddress": "/_1_trackname6",
               "type": "String",
               "niceName": "/1/trackname6",
@@ -2971,7 +2971,7 @@
               "feedbackOnly": false
             },
             {
-              "value": true,
+              "value": false,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -2985,6 +2985,7 @@
               "feedbackOnly": false
             },
             {
+              "value": true,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -2998,6 +2999,7 @@
               "feedbackOnly": false
             },
             {
+              "value": false,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3011,7 +3013,7 @@
               "feedbackOnly": false
             },
             {
-              "value": true,
+              "value": false,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3025,6 +3027,7 @@
               "feedbackOnly": false
             },
             {
+              "value": true,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3038,6 +3041,7 @@
               "feedbackOnly": false
             },
             {
+              "value": false,
               "minValue": 0,
               "maxValue": 1,
               "default": false,
@@ -3051,7 +3055,7 @@
               "feedbackOnly": false
             },
             {
-              "value": "Mic 1",
+              "value": "AN 1/2",
               "controlAddress": "/_2_trackname",
               "type": "String",
               "niceName": "/2/trackname",
@@ -3113,6 +3117,11 @@
       {
         "value": true,
         "controlAddress": "/showSnapGrid"
+      },
+      {
+        "value": 16,
+        "hexMode": false,
+        "controlAddress": "/snapGridSize"
       }
     ],
     "viewOffset": [
@@ -3138,48 +3147,6 @@
     }
   },
   "sequences": {
-    "items": [
-      {
-        "parameters": [
-          {
-            "value": 222.46,
-            "controlAddress": "/totalTime"
-          },
-          {
-            "value": true,
-            "controlAddress": "/loop"
-          },
-          {
-            "value": 115.5385818481445,
-            "controlAddress": "/viewEndTime"
-          },
-          {
-            "value": "",
-            "controlAddress": "/ltcSyncModule",
-            "enabled": false
-          }
-        ],
-        "niceName": "Sequence",
-        "type": "Sequence",
-        "layers": {
-          "hideInEditor": true,
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "cues": {
-          "hideInEditor": true,
-          "viewOffset": [
-            0,
-            0
-          ],
-          "viewZoom": 1.0
-        },
-        "editing": true
-      }
-    ],
     "viewOffset": [
       0,
       0
