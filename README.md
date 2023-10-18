@@ -19,7 +19,7 @@ Feel free to use the attached Template-Session-File, which includes a Dashboard 
 with a few more functions....
 the session file "Totalmix-Template.noisette" has also been updated
 
-
+# -------------------------------------------------------------------
 # RME-Totalmix contrôle par OSC avec Chataigne
 Les ports OSC doivent être correctement configurés dans Totalmix ; les valeurs par défaut sont Port (incoming) : 8000 et Port (outgoing) : 9000
 et OSC dois être activés dans le menu "Option" de Totalmix ! Dans ce même Menu il y a les Sous-Menu Settings pour plus de réglages.
