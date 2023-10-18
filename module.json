@@ -44,77 +44,39 @@
 		"TrackNames":
 		{
 			"type":"Container",
-			"Track1":
-			{ "type":"String",
-				"description":"" },
-			"Track2":
-			{ "type":"String",
-				"description":"" },
-			"Track3":
-			{ "type":"String",
-				"description":"" },
-			"Track4":
-			{ "type":"String",
-				"description":"" },
-			"Track5":
-			{ "type":"String",
-				"description":"" },
-			"Track6":
-			{ "type":"String",
-				"description":"" },
-			"Track7":
-			{ "type":"String",
-				"description":"" },
-			"Track8":
-			{ "type":"String",
-				"description":"" },
-			"ActiveTrack":
-			{ "type":"String",
-				"description":"" },
-			"Submix":
-			{ "type":"String",
-				"description":"" },
+			"Track1": { "type":"String", "description":"" },
+			"Track2": { "type":"String", "description":"" },
+			"Track3": { "type":"String", "description":"" },
+			"Track4": { "type":"String", "description":"" },
+			"Track5": { "type":"String", "description":"" },
+			"Track6": { "type":"String", "description":"" },
+			"Track7": { "type":"String", "description":"" },
+			"Track8": { "type":"String", "description":"" },
+			"ActiveTrack": { "type":"String", "description":"" },
+			"Submix": { "type":"String", "description":"" },
 		},
-		
-		
+	
 			"Levels":
 		{
 			"type":"Container",		
-			"MasterFader":
-			{ "type":"String",
-				"description":"" },
-			"Level L":
-			{ "type":"Float",
-				"description":"" },
-			"Level R":
-			{ "type":"Float",
-				"description":"" },	
+			"MasterFader": { "type":"String", "description":"" },
+			"Level L": { "type":"Float", "description":"" },
+			"Level R": { "type":"Float", "description":"" },	
 		},
 			
-			"Layers":
+			"States":
 		{
 			"type":"Container",	
-			"InputLayer1":
-			{ "type":"Boolean",
-				"description":"" },
-			"PlaybackLayer1":
-			{ "type":"Boolean",
-				"description":"" },
-			"OutputLayer1":
-			{ "type":"Boolean",
-				"description":"" },
-			"InputLayer2":
-			{ "type":"Boolean",
-				"description":"" },
-			"PlaybackLayer2":
-			{ "type":"Boolean",
-				"description":"" },
-			"OutputLayer2":
-			{ "type":"Boolean",
-				"description":"" }
-		}
-		
-	
+			"InputLayer1": { "type":"Boolean", "description":"" },
+			"PlaybackLayer1": { "type":"Boolean", "description":"" },
+			"OutputLayer1": { "type":"Boolean", "description":"" },
+			"InputLayer2": { "type":"Boolean", "description":"" },
+			"PlaybackLayer2": { "type":"Boolean", "description":"" },
+			"OutputLayer2": { "type":"Boolean", "description":"" },
+			"--------": { "type":"String", "description":"" },
+			"globalMute": { "type":"Boolean", "description":"" },
+			"globalSolo": { "type":"Boolean", "description":"" }
+		}	
 	},
 	
 	

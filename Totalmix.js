@@ -17,7 +17,6 @@ else {local.send("/2/trackname");
 val=0 ;}
 }
 
-
 function oscEvent(address, args) { 
 // names
 if (address=="/2/trackname"){ 
@@ -47,19 +46,23 @@ if (address=="/1/level1Left"){
 local.values.levels.levelL.set(args[0]); }
 if (address=="/1/level1Right"){
 local.values.levels.levelR.set(args[0]); }
-// layer states
+//  states
 if (address=="/1/busInput"){ 
-local.values.layers.inputLayer1.set(args[0]); }
+local.values.states.inputLayer1.set(args[0]); }
 if (address=="/1/busPlayback"){ 
-local.values.layers.playbackLayer1.set(args[0]); }
+local.values.states.playbackLayer1.set(args[0]); }
 if (address=="/1/busOutput"){ 
-local.values.layers.outputLayer1.set(args[0]); }
+local.values.states.outputLayer1.set(args[0]); }
 if (address=="/2/busInput"){ 
-local.values.layers.inputLayer2.set(args[0]); }
+local.values.states.inputLayer2.set(args[0]); }
 if (address=="/2/busPlayback"){ 
-local.values.layers.playbackLayer2.set(args[0]); }
+local.values.states.playbackLayer2.set(args[0]); }
 if (address=="/2/busOutput"){ 
-local.values.layers.outputLayer2.set(args[0]); }
+local.values.states.outputLayer2.set(args[0]); }
+if (address=="/1/globalMute"){ 
+local.values.states.globalMute.set(args[0]); }
+if (address=="/1/globalSolo"){ 
+local.values.states.globalSolo.set(args[0]); }
 
 }
 
