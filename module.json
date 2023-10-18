@@ -3,7 +3,7 @@
   "type":"OSC",
   "path":"Software",
   
-  "version":"2.0",
+  "version":"2.2",
   "description":"Allow you to control RME-Totalmix with chataigne",
   "url":"https://github.com/ziginfo/Totalmix-Chataigne-Module",
   "downloadURL":"https://github.com/ziginfo/Totalmix-Chataigne-Module/archive/refs/heads/main.zip",
@@ -20,7 +20,7 @@
 	"defaults": {
 		"autoAdd":true,
 		"OSC Input": {
-			"localPort" : 9000, },
+			"localPort" : 9000 },
 			
 		"OSC Outputs": {
 			"OSC Output": {
@@ -35,50 +35,89 @@
 	"scripts": ["Totalmix.js"],
 	
 	"values":  {
+	
+		"Click to update all":
+			{ "type":"Trigger",
+				"description":"Update actual device status.\n"
+			},
 		
 		"TrackNames":
 		{
 			"type":"Container",
-			"Click to update all":
-			{ "type":"Trigger",
-				"description":"Update actual device status.\n"
-			},
 			"Track1":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track2":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track3":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track4":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track5":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track6":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track7":
 			{ "type":"String",
-				"description":"texte"
-			},
+				"description":"" },
 			"Track8":
 			{ "type":"String",
-				"description":"texte"
-			}
+				"description":"" },
+			"ActiveTrack":
+			{ "type":"String",
+				"description":"" },
+			"Submix":
+			{ "type":"String",
+				"description":"" },
 		},
+		
+		
+			"Levels":
+		{
+			"type":"Container",		
+			"MasterFader":
+			{ "type":"String",
+				"description":"" },
+			"Level L":
+			{ "type":"Float",
+				"description":"" },
+			"Level R":
+			{ "type":"Float",
+				"description":"" },	
+		},
+			
+			"Layers":
+		{
+			"type":"Container",	
+			"InputLayer1":
+			{ "type":"Boolean",
+				"description":"" },
+			"PlaybackLayer1":
+			{ "type":"Boolean",
+				"description":"" },
+			"OutputLayer1":
+			{ "type":"Boolean",
+				"description":"" },
+			"InputLayer2":
+			{ "type":"Boolean",
+				"description":"" },
+			"PlaybackLayer2":
+			{ "type":"Boolean",
+				"description":"" },
+			"OutputLayer2":
+			{ "type":"Boolean",
+				"description":"" }
+		}
 		
 	
 	},
+	
+	
 	
 	"commands": {
 	
@@ -256,7 +295,7 @@
 					"type": "Enum",
 					"options" : {
 						"On" : 1.0,
-						"Off" : 0.0, } }, 
+						"Off" : 0.0 } }, 
 		}  },
 				
 		"ChSolo" : {
@@ -282,7 +321,7 @@
 					"type": "Enum",
 					"options" : {
 						"On" : 1.0,
-						"Off" : 0.0, } },  
+						"Off" : 0.0 } },  
 				
 		}	},
 		
@@ -437,7 +476,7 @@
 					"type": "Enum",
 					"options" : {
 						"On/Off" : 1.0,
-						"inactive" : 0.0, } },
+						"inactive" : 0.0 } },
 			
 			"B1 Type": {
 					"type": "Enum",
@@ -482,7 +521,7 @@
 						"10K" : 0.9,
 						"12K" : 0.933,
 						"16K" : 0.967,
-						"20K" : 0.999,   } 	},  
+						"20K" : 0.999   } 	},  
 					
 			"B1 Q (select)": {"type": "Enum",
 					"options" : {
@@ -506,7 +545,7 @@
 						"4.3" : 0.85,
 						"4.5" : 0.9,
 						"4.7" : 0.95,
-						"5.0" : 0.999,   } 	},  
+						"5.0" : 0.999   } 	},  
 					
 			"B2 Gain (-20db to +20db)": {
 					"type": "Float",
@@ -545,7 +584,7 @@
 						"10K" : 0.9,
 						"12K" : 0.933,
 						"16K" : 0.967,
-						"20K" : 0.999,   } 	},
+						"20K" : 0.999   } 	},
 					
 			"B2 Q (select)": {"type": "Enum",
 					"options" : {
@@ -569,14 +608,14 @@
 						"4.3" : 0.85,
 						"4.5" : 0.9,
 						"4.7" : 0.95,
-						"5.0" : 0.999,   } 	}, 	
+						"5.0" : 0.999   } 	}, 	
 					
 			"B3 Type": {
 					"type": "Enum",
 					"options" : {
 						"BandPass" : 0.0,
 						"Shelf" : 0.5,
-						"Cut" : 1.0, } }, 
+						"Cut" : 1.0 } }, 
 						
 			"B3 Gain (-20db to +20db)": {
 					"type": "Float",
@@ -615,7 +654,7 @@
 						"10K" : 0.9,
 						"12K" : 0.933,
 						"16K" : 0.967,
-						"20K" : 0.999,   } 	},
+						"20K" : 0.999   } 	},
 					
 			"B3 Q (select)": {"type": "Enum",
 					"options" : {
@@ -639,7 +678,7 @@
 						"4.3" : 0.85,
 						"4.5" : 0.9,
 						"4.7" : 0.95,
-						"5.0" : 0.999,   } 	}, 
+						"5.0" : 0.999   } 	}, 
 					
 			"LoCut Toggle on/off": {
 					"type": "Enum",
@@ -685,7 +724,7 @@
 						"360" : 0.9,
 						"400" : 0.933,
 						"440" : 0.96,
-						"500" : 0.999,   } 	},		 				
+						"500" : 0.999   } 	},		 				
 		}  },
 	
 		"EQ SingleBand" : {
@@ -698,15 +737,14 @@
 					"options" : {
 						"Band 1" : 1,
 						"Band 2" : 2,
-						"Band 3" : 3, } },
+						"Band 3" : 3 } },
 						
 			"EQ Type": {
 					"type": "Enum",
 					"options" : {
 						"BandPass" : 0.0,
 						"Shelf" : 0.5, 
-						"B3=>Cut" : 1.0,
-						} }, 
+						"B3=>Cut" : 1.0 } }, 
 						
 			"Gain (-20db to +20db)": {
 					"type": "Float",
@@ -745,7 +783,7 @@
 						"10K" : 0.9,
 						"12K" : 0.933,
 						"16K" : 0.967,
-						"20K" : 0.999,   } 	},
+						"20K" : 0.999   } 	},
 					
 			"Q (select)": {"type": "Enum",
 					"options" : {
@@ -769,7 +807,7 @@
 						"4.3" : 0.85,
 						"4.5" : 0.9,
 						"4.7" : 0.95,
-						"5.0" : 0.999,   } 	}, 									
+						"5.0" : 0.999   } 	}, 									
 		}  },
 	
 		"EQ Toggle on/off" : {
@@ -821,7 +859,7 @@
 						"360" : 0.9,
 						"400" : 0.933,
 						"440" : 0.96,
-						"500" : 0.999,   } 	}, 			
+						"500" : 0.999   } 	}, 			
 		}  },
 			 	
 	 	"Compressor" : {
@@ -956,7 +994,7 @@
 						"17" : 16.0,
 						"18" : 17.0,
 						"19" : 18.0,
-						"20" : 19.0,  }  }, 
+						"20" : 19.0  }  }, 
 		}  },
 		
 		"Bank back" : {
@@ -997,7 +1035,7 @@
 						"SoloGr 1" : 4,
 						"SoloGr 2" : 3,
 						"SoloGr 3" : 2,
-						"SoloGr 4" : 1,  }	}, 
+						"SoloGr 4" : 1  }	}, 
 		}  },
 		
 		"FaderGroup" : {
@@ -1010,7 +1048,7 @@
 						"FaderGr 1" : 4,
 						"FaderGr 2" : 3,
 						"FaderGr 3" : 2,
-						"FaderGr 4" : 1,  } }, 
+						"FaderGr 4" : 1  } }, 
 		}  },
 	
 		

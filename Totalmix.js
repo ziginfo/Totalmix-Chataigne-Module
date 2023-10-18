@@ -13,12 +13,58 @@ function keepAlive() {
 	if (val == 0)
 {local.send("/1/trackname1");
 val= val+1;}
-else {local.send("/2/trackname");
+else {local.send("/2/trackname");	
 val=0 ;}
 }
-  
 
-//Page-1
+
+function oscEvent(address, args) { 
+// names
+if (address=="/2/trackname"){ 
+local.values.trackNames.activeTrack.set(args[0]); }
+if (address=="/1/trackname1"){ 
+local.values.trackNames.track1.set(args[0]); }
+if (address=="/1/trackname2"){ 
+local.values.trackNames.track2.set(args[0]); }
+if (address=="/1/trackname3"){
+local.values.trackNames.track3.set(args[0]); }
+if (address=="/1/trackname4"){
+local.values.trackNames.track4.set(args[0]); }
+if (address=="/1/trackname5"){
+local.values.trackNames.track5.set(args[0]); }
+if (address=="/1/trackname6"){
+local.values.trackNames.track6.set(args[0]); }
+if (address=="/1/trackname7"){
+local.values.trackNames.track7.set(args[0]); }
+if (address=="/1/trackname8"){
+local.values.trackNames.track8.set(args[0]); }
+if (address=="/1/labelSubmix"){
+local.values.trackNames.submix.set(args[0]); }
+// levels
+if (address=="/1/mastervolumeVal"){
+local.values.levels.masterFader.set(args[0]); }
+if (address=="/1/level1Left"){
+local.values.levels.levelL.set(args[0]); }
+if (address=="/1/level1Right"){
+local.values.levels.levelR.set(args[0]); }
+// layer states
+if (address=="/1/busInput"){ 
+local.values.layers.inputLayer1.set(args[0]); }
+if (address=="/1/busPlayback"){ 
+local.values.layers.playbackLayer1.set(args[0]); }
+if (address=="/1/busOutput"){ 
+local.values.layers.outputLayer1.set(args[0]); }
+if (address=="/2/busInput"){ 
+local.values.layers.inputLayer2.set(args[0]); }
+if (address=="/2/busPlayback"){ 
+local.values.layers.playbackLayer2.set(args[0]); }
+if (address=="/2/busOutput"){ 
+local.values.layers.outputLayer2.set(args[0]); }
+
+}
+
+
+//Common Functions Page-1
 // Globals
 
 function undo() {

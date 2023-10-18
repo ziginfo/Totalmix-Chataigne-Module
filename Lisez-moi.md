@@ -13,3 +13,8 @@ Les paramètres du Player (Play, Stop, Record etc.) concernent uniquement l'UFX 
 Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix !! Les pistes invisibles/cachées sont ignorées ! Par conséquent, changer la disposition des pistes dans Totalmix change également les "cibles réelles" pour la plupart des commandes OSC !
 
 N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un tableau de bord (Dashboard) contenant des informations utiles.
+
+# nouvelle version V2.2 
+
+avec quelques fonctions en plus....
+le fichier de session "Totalmix-Template.noisette" a été également mis à jour
