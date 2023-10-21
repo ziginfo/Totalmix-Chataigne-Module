@@ -14,7 +14,14 @@ Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix !! 
 
 N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un tableau de bord (Dashboard) contenant des informations utiles.
 
-# nouvelle version V2.2 
+:::: nouvelle version V2.2 
 
 avec quelques fonctions en plus....
 le fichier de session "Totalmix-Template.noisette" a été également mis à jour
+
+# :::  New Version V2.3
+avec quelques fonctions supplémentaires....
+tous les conteneurs pour les feedbacks ont été déplacés hors de la section Valeurs pour être plus indépendants
+un conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...
+des vumètres ont également été ajoutés
+le fichier de session "Totalmix-Template.noisette" a aussi été mis à jour

@@ -14,12 +14,20 @@ All OSC-Commands will only affect Tracks which are visible in Totalmix !! Invisi
 
 Feel free to use the attached Template-Session-File, which includes a Dashboard with with useful information.
 
-# New Version V2.2
+:::: New Version V2.2
 
 with a few more functions....
 the session file "Totalmix-Template.noisette" has also been updated
 
-# ----------------------------------------------
+# >>>  New Version V2.3
+with a few more functions....
+all the Containers for Requested Data have been moved out of the Value Section to be more independant
+a full Selected Channel Container has been added to see all the feedback in live...
+Vumeters have been added too
+the session file "Totalmix-Template.noisette" has also been updated
+
+
+# Français .....
 # RME-Totalmix contrôle par OSC avec Chataigne
 Les ports OSC doivent être correctement configurés dans Totalmix ; les valeurs par défaut sont Port (incoming) : 8000 et Port (outgoing) : 9000
 et OSC dois être activés dans le menu "Option" de Totalmix ! Dans ce même Menu il y a les Sous-Menu Settings pour plus de réglages.
@@ -36,7 +44,14 @@ Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix !! 
 
 N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un tableau de bord (Dashboard) contenant des informations utiles.
 
-# nouvelle version V2.2 
+::: nouvelle version V2.2 
 
 avec quelques fonctions en plus....
 le fichier de session "Totalmix-Template.noisette" a été également mis à jour
+
+# >>>  New Version V2.3
+avec quelques fonctions supplémentaires....
+tous les conteneurs pour les feedbacks ont été déplacés hors de la section Valeurs pour être plus indépendants
+un conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...
+des vumètres ont également été ajoutés
+le fichier de session "Totalmix-Template.noisette" a aussi été mis à jour

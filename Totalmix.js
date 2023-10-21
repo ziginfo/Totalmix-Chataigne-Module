@@ -1,11 +1,234 @@
-// this script is based on the official OSC-Chart for Totalmix published by RME-Audio
-//  http://www.rme-audio.de/downloads/osc_table_totalmix_new.zip
+var TSSendAlive = 0;
+var globals;
+var names;
+var selchan;
+var vus;
 
+
+var channelNames = {
+	't.0' : "Channel 1", 
+	't.1' : "Channel 2", 
+	't.2' : "Channel 3", 
+	't.3' : "Channel 4", 
+	't.4' : "Channel 5", 
+	't.5' : "Channel 6", 
+	't.6' : "Channel 7", 
+	't.7' : "Channel 8", 
+	
+};
+
+var commandNames = {
+	"name"	:	["Label", "s"],
+	"level.l"	:	["Level L", "f"],
+	"level.r" : ["Level R", "f"],
+	"mix" : ["Fader", "s"],
+	"gaindb" : ["Gain db", "s"],
+	"pan" : ["Pan", "s"],
+	"phantom" : ["Phantom", "b"],
+	"invert" : ["Invert", "b"],
+	"mute" : ["Mute", "b"],
+	"solo" : ["Solo", "b"],
+	"eq.on" : ["EQ on", "b"],
+	"dyn.on" : ["Dyn on", "b"],
+	"hpf.on" : ["LoCut on", "b"],
+	"eq.hpf.freq" : ["HPF Freq", "s"],
+	"eq.hpf.slope" : ["HPF Slope", "s"],
+	"eq.b1.freq" : ["EQ1 Freq", "s"],
+	"eq.b1.gain" : ["EQ1 Gain", "s"],
+	"eq.b1.q" : ["EQ1 Q", "s"],
+	"eq.b2.freq" : ["EQ2 Freq", "s"],
+	"eq.b2.gain" : ["EQ2 Gain", "s"],
+	"eq.b2.q" : ["EQ2 Q", "s"],
+	"eq.b3.freq" : ["EQ3 Freq", "s"],
+	"eq.b3.gain" : ["EQ3 Gain", "s"],
+	"eq.b3.q" : ["EQ3 Q", "s"],
+	"dyn.ratio" : ["Dyn Ratio", "s"],
+	"dyn.threshold" : ["Dyn Threshold", "s"],
+	"dyn.outgain" : ["Dyn OutGain", "s"]
+};
+
+function init() {
+//Globals Container
+	globals = local.addContainer("Globals");
+		globals.setCollapsed(true);
+		globals.addStringParameter("MasterFader", "", "");
+		globals.addBoolParameter("globalMute", "", "");
+		globals.addBoolParameter("globalSolo", "", "");
+		globals.addStringParameter("----", "", "--");
+		globals.addBoolParameter("InputLayer", "", "");
+		globals.addBoolParameter("PlaybackLayer", "", "");
+		globals.addBoolParameter("OutputLayer", "", "");
+		
+//Channel Names Container
+	names = local.addContainer("Track Names");
+	for (var i = 0; i< 8; i++) {
+		names.addStringParameter("Track "+(i+1), "", ""); 
+		names.setCollapsed(true);}
+		names.addStringParameter("Selected Track", "", "");
+		names.addStringParameter("Selected Submix", "", "");
+
+//Selected Channel Container
+	selchan = local.addContainer("Selected Channel");
+	selchan.setCollapsed(true);
+	var champs = util.getObjectProperties(commandNames);
+	for (var n = 0; n < champs.length; n++) {
+				if (commandNames[champs[n]][1] == "f") {
+				selchan.addFloatParameter(commandNames[champs[n]][0], "", 0, 0, 1); } 
+				else if (commandNames[champs[n]][1] == "b") {
+				selchan.addBoolParameter(commandNames[champs[n]][0], "", false); } 
+				else if (commandNames[champs[n]][1] == "s") {
+				selchan.addStringParameter(commandNames[champs[n]][0], "", ""); }
+				}
+
+//Vu-Meters Container
+	vus = local.addContainer("Vumeters");
+		vus.setCollapsed(true);
+		vus.addFloatParameter("MainL", "", 0, 0, 1);
+		vus.addFloatParameter("MainR", "", 0, 0, 1);
+		vus.addStringParameter("---", "", "---");
+	for (var i = 0; i< 8; i++) {
+		vus.addFloatParameter("Level "+(i+1), "", 0, 0, 1); }
+	
+	}
+	
+	
+/// Request Datas	
+	
+	function oscEvent(address, args) { 
+	
+// Sel Track and Sub Names
+		if (address=="/2/trackname"){ 
+			local.trackNames.selectedTrack.set(args[0]); }
+		if (address=="/1/labelSubmix"){
+			local.trackNames.selectedSubmix.set(args[0]); }
+// Track Names
+		if (address=="/1/trackname1"){ 
+			local.trackNames.track1.set(args[0]); }
+		if (address=="/1/trackname2"){ 
+			local.trackNames.track2.set(args[0]); }		
+		if (address=="/1/trackname3"){
+			local.trackNames.track3.set(args[0]); }		
+		if (address=="/1/trackname4"){
+			local.trackNames.track4.set(args[0]); }		
+		if (address=="/1/trackname5"){
+			local.trackNames.track5.set(args[0]);  }		
+		if (address=="/1/trackname6"){
+			local.trackNames.track6.set(args[0]);  }		
+		if (address=="/1/trackname7"){
+			local.trackNames.track7.set(args[0]); }		
+		if (address=="/1/trackname8"){
+			local.trackNames.track8.set(args[0]);  }
+		
+// levels				
+		if (address=="/1/level1Left"){
+			local.vumeters.mainL.set(args[0]); }
+		if (address=="/1/level1Right"){
+			local.vumeters.mainR.set(args[0]); }
+		
+		if (address=="/1/level1Left"){
+			local.vumeters.level1.set(args[0]); }
+		if (address=="/1/level2Left"){
+			local.vumeters.level2.set(args[0]); }
+		if (address=="/1/level3Left"){
+			local.vumeters.level3.set(args[0]); }
+		if (address=="/1/level4Left"){
+			local.vumeters.level4.set(args[0]); }
+		if (address=="/1/level5Left"){
+			local.vumeters.level5.set(args[0]); }
+		if (address=="/1/level6Left"){
+			local.vumeters.level6.set(args[0]); }
+		if (address=="/1/level7Left"){
+			local.vumeters.level7.set(args[0]); }
+		if (address=="/1/level8Left"){
+			local.vumeters.level8.set(args[0]); }
+		
+//  globals	
+		if (address=="/1/mastervolumeVal"){
+			local.globals.masterFader.set(args[0]); }
+			
+		if (address=="/1/busInput"){ 
+			local.globals.inputLayer.set(args[0]); }
+		if (address=="/1/busPlayback"){ 
+			local.globals.playbackLayer.set(args[0]); }
+		if (address=="/1/busOutput"){ 
+			local.globals.outputLayer.set(args[0]); }
+		if (address=="/1/globalMute"){ 
+			local.globals.globalMute.set(args[0]); }
+		if (address=="/1/globalSolo"){ 
+			local.globals.globalSolo.set(args[0]); }
+		
+		
+// Selected channel (Page2)
+		if (address=="/2/trackname"){ 
+			local.selectedChannel.label.set(args[0]);}
+		if (address=="/2/levelLeft"){
+			local.selectedChannel.levelL.set(args[0]); }
+		if (address=="/2/levelRight"){
+			local.selectedChannel.levelR.set(args[0]); }
+		if (address=="/2/gainVal"){
+			local.selectedChannel.gainDb.set(args[0]); }
+		if (address=="/2/volumeVal"){ 
+			local.selectedChannel.fader.set(args[0]); }
+		if (address=="/2/panVal"){ 
+			local.selectedChannel.pan.set(args[0]); }
+		if (address=="/2/solo"){ 
+			local.selectedChannel.solo.set(args[0]); }
+		if (address=="/2/cue"){ 
+			local.selectedChannel.solo.set(args[0]); }
+		if (address=="/2/phantom"){ 
+			local.selectedChannel.phantom.set(args[0]); }
+		if (address=="/2/mute"){ 
+			local.selectedChannel.mute.set(args[0]); }
+		if (address=="/2/phase"){ 
+			local.selectedChannel.invert.set(args[0]); }
+		if (address=="/2/eqEnable"){ 
+			local.selectedChannel.eqOn.set(args[0]); }
+		if (address=="/2/compexpEnable"){ 
+			local.selectedChannel.dynOn.set(args[0]); }
+		
+		if (address=="/2/lowcutEnable"){ 
+			local.selectedChannel.loCutOn.set(args[0]); }
+		if (address=="/2/lowcutFreqVal"){ 
+			local.selectedChannel.hpfFreq.set(args[0]); }
+			if (address=="/2/lowcutGradeVal"){ 
+			local.selectedChannel.hpfSlope.set(args[0]); }
+		
+		if (address=="/2/eqFreq1Val"){ 
+			local.selectedChannel.eq1Freq.set(args[0]); }
+		if (address=="/2/eqGain1Val"){ 
+			local.selectedChannel.eq1Gain.set(args[0]); }
+		if (address=="/2/eqQ1Val"){ 
+			local.selectedChannel.eq1Q.set(args[0]); }
+		if (address=="/2/eqFreq2Val"){ 
+			local.selectedChannel.eq2Freq.set(args[0]); }
+		if (address=="/2/eqGain2Val"){ 
+			local.selectedChannel.eq2Gain.set(args[0]); }
+		if (address=="/2/eqQ2Val"){ 
+			local.selectedChannel.eq2Q.set(args[0]); }
+		if (address=="/2/eqFreq3Val"){ 
+			local.selectedChannel.eq3Freq.set(args[0]); }
+		if (address=="/2/eqGain3Val"){ 
+			local.selectedChannel.eq3Gain.set(args[0]); }
+		if (address=="/2/eqQ3Val"){ 
+			local.selectedChannel.eq3Q.set(args[0]); }
+		
+		if (address=="/2/compRatioVal"){ 
+			local.selectedChannel.dynRatio.set(args[0]); }
+		if (address=="/2/compTrshVal"){ 
+			local.selectedChannel.dynThreshold.set(args[0]); }
+		if (address=="/2/compexpGainVal"){ 
+			local.selectedChannel.dynOutGain.set(args[0]); }
+
+}
+
+
+/// keep alive !!
 function update(deltaTime) {
 	var now = util.getTime();
-	if(now > TSSendAlive) {
-		TSSendAlive = now + 1;
-		keepAlive(); }
+	if (now > TSSendAlive) {
+		TSSendAlive = now + 0.5;
+		keepAlive();
+	}
 }
 
 function keepAlive() {
@@ -16,56 +239,7 @@ val= val+1;}
 else {local.send("/2/trackname");	
 val=0 ;}
 }
-
-function oscEvent(address, args) { 
-// names
-if (address=="/2/trackname"){ 
-local.values.trackNames.activeTrack.set(args[0]); }
-if (address=="/1/trackname1"){ 
-local.values.trackNames.track1.set(args[0]); }
-if (address=="/1/trackname2"){ 
-local.values.trackNames.track2.set(args[0]); }
-if (address=="/1/trackname3"){
-local.values.trackNames.track3.set(args[0]); }
-if (address=="/1/trackname4"){
-local.values.trackNames.track4.set(args[0]); }
-if (address=="/1/trackname5"){
-local.values.trackNames.track5.set(args[0]); }
-if (address=="/1/trackname6"){
-local.values.trackNames.track6.set(args[0]); }
-if (address=="/1/trackname7"){
-local.values.trackNames.track7.set(args[0]); }
-if (address=="/1/trackname8"){
-local.values.trackNames.track8.set(args[0]); }
-if (address=="/1/labelSubmix"){
-local.values.trackNames.submix.set(args[0]); }
-// levels
-if (address=="/1/mastervolumeVal"){
-local.values.levels.masterFader.set(args[0]); }
-if (address=="/1/level1Left"){
-local.values.levels.levelL.set(args[0]); }
-if (address=="/1/level1Right"){
-local.values.levels.levelR.set(args[0]); }
-//  states
-if (address=="/1/busInput"){ 
-local.values.states.inputLayer1.set(args[0]); }
-if (address=="/1/busPlayback"){ 
-local.values.states.playbackLayer1.set(args[0]); }
-if (address=="/1/busOutput"){ 
-local.values.states.outputLayer1.set(args[0]); }
-if (address=="/2/busInput"){ 
-local.values.states.inputLayer2.set(args[0]); }
-if (address=="/2/busPlayback"){ 
-local.values.states.playbackLayer2.set(args[0]); }
-if (address=="/2/busOutput"){ 
-local.values.states.outputLayer2.set(args[0]); }
-if (address=="/1/globalMute"){ 
-local.values.states.globalMute.set(args[0]); }
-if (address=="/1/globalSolo"){ 
-local.values.states.globalSolo.set(args[0]); }
-
-}
-
+///
 
 //Common Functions Page-1
 // Globals
