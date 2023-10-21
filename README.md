@@ -21,9 +21,11 @@ the session file "Totalmix-Template.noisette" has also been updated
 
 # >>>  New Version V2.3
 with a few more functions....
+
 all the Containers for Requested Data have been moved out of the Value Section to be more independant
-a full Selected Channel Container has been added to see all the feedback in live...
+and a full "Selected Channel Container" has been added to see all the feedback in live...
 Vumeters have been added too
+
 the session file "Totalmix-Template.noisette" has also been updated
 
 
@@ -52,6 +54,7 @@ le fichier de session "Totalmix-Template.noisette" a été également mis à jou
 # >>>  Nouvelle Version V2.3
 Avec quelques fonctions supplémentaires....
 Tous les conteneurs pour les feedbacks ont été déplacés hors de la section Valeurs pour être plus indépendants
-Un conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...
+et conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...
 Des vumètres ont également été ajoutés
+
 Le fichier de session "Totalmix-Template.noisette" a aussi été mis à jour
