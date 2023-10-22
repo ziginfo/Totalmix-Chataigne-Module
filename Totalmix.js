@@ -63,11 +63,20 @@ function init() {
 		
 //Channel Names Container
 	names = local.addContainer("Track Names");
+	names.setCollapsed(true);
+	names.addStringParameter("Active Layer", "", "");
 	for (var i = 0; i< 8; i++) {
-		names.addStringParameter("Track "+(i+1), "", ""); 
-		names.setCollapsed(true);}
+		names.addStringParameter("Track "+(i+1), "", ""); }
 		names.addStringParameter("Selected Track", "", "");
 		names.addStringParameter("Selected Submix", "", "");
+		
+//Channel Fader  Container
+	faders = local.addContainer("Track Faders");
+	faders.setCollapsed(true);
+	faders.addStringParameter("Active Layer", "", "");
+	for (var i = 0; i< 8; i++) {
+		faders.addStringParameter("Fader "+(i+1), "", ""); 
+		}
 
 //Selected Channel Container
 	selchan = local.addContainer("Selected Channel");
@@ -120,6 +129,24 @@ function init() {
 			local.trackNames.track7.set(args[0]); }		
 		if (address=="/1/trackname8"){
 			local.trackNames.track8.set(args[0]);  }
+			
+// Track Volume Faders
+		if (address=="/1/volume1Val"){ 
+			local.trackFaders.fader1.set(args[0]); }
+		if (address=="/1/volume2Val"){ 
+			local.trackFaders.fader2.set(args[0]); }		
+		if (address=="/1/volume3Val"){
+			local.trackFaders.fader3.set(args[0]); }		
+		if (address=="/1/volume4Val"){
+			local.trackFaders.fader4.set(args[0]); }		
+		if (address=="/1/volume5Val"){
+			local.trackFaders.fader5.set(args[0]);  }		
+		if (address=="/1/volume6Val"){
+			local.trackFaders.fader6.set(args[0]);  }		
+		if (address=="/1/volume7Val"){
+			local.trackFaders.fader7.set(args[0]); }		
+		if (address=="/1/volume8Val"){
+			local.trackFaders.fader8.set(args[0]);  }
 		
 // levels				
 		if (address=="/1/level1Left"){
@@ -149,11 +176,21 @@ function init() {
 			local.globals.masterFader.set(args[0]); }
 			
 		if (address=="/1/busInput"){ 
-			local.globals.inputLayer.set(args[0]); }
+			local.globals.inputLayer.set(args[0]); 
+			if (args[0]==true) {
+			local.trackNames.activeLayer.set("Inputs") ;
+			local.trackFaders.activeLayer.set("Inputs") ; } }
 		if (address=="/1/busPlayback"){ 
-			local.globals.playbackLayer.set(args[0]); }
+			local.globals.playbackLayer.set(args[0]);
+			if (args[0]==true) {
+			local.trackNames.activeLayer.set("Playbacks") ;
+			local.trackFaders.activeLayer.set("Playbacks") ; } }
 		if (address=="/1/busOutput"){ 
-			local.globals.outputLayer.set(args[0]); }
+			local.globals.outputLayer.set(args[0]);
+			if (args[0]==true) {
+			local.trackNames.activeLayer.set("Outputs") ;
+			local.trackFaders.activeLayer.set("Outputs") ;} }
+		
 		if (address=="/1/globalMute"){ 
 			local.globals.globalMute.set(args[0]); }
 		if (address=="/1/globalSolo"){ 
