@@ -81,6 +81,7 @@ function init() {
 //Selected Channel Container
 	selchan = local.addContainer("Selected Channel");
 	selchan.setCollapsed(true);
+	selchan.addStringParameter("Active Layer", "", "");
 	var champs = util.getObjectProperties(commandNames);
 	for (var n = 0; n < champs.length; n++) {
 				if (commandNames[champs[n]][1] == "f") {
@@ -179,17 +180,20 @@ function init() {
 			local.globals.inputLayer.set(args[0]); 
 			if (args[0]==true) {
 			local.trackNames.activeLayer.set("Inputs") ;
-			local.trackFaders.activeLayer.set("Inputs") ; } }
+			local.trackFaders.activeLayer.set("Inputs") ;
+			local.selectedChannel.activeLayer.set("Inputs") ; } }
 		if (address=="/1/busPlayback"){ 
 			local.globals.playbackLayer.set(args[0]);
 			if (args[0]==true) {
 			local.trackNames.activeLayer.set("Playbacks") ;
-			local.trackFaders.activeLayer.set("Playbacks") ; } }
+			local.trackFaders.activeLayer.set("Playbacks") ;
+			local.selectedChannel.activeLayer.set("Playbacks") ; } }
 		if (address=="/1/busOutput"){ 
 			local.globals.outputLayer.set(args[0]);
 			if (args[0]==true) {
 			local.trackNames.activeLayer.set("Outputs") ;
-			local.trackFaders.activeLayer.set("Outputs") ;} }
+			local.trackFaders.activeLayer.set("Outputs") ;
+			local.selectedChannel.activeLayer.set("Outputs") ;} }
 		
 		if (address=="/1/globalMute"){ 
 			local.globals.globalMute.set(args[0]); }
