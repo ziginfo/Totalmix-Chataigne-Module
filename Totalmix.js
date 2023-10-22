@@ -28,20 +28,22 @@ var commandNames = {
 	"invert" : ["Invert", "b"],
 	"mute" : ["Mute", "b"],
 	"solo" : ["Solo", "b"],
-	"eq.on" : ["EQ on", "b"],
-	"dyn.on" : ["Dyn on", "b"],
 	"hpf.on" : ["LoCut on", "b"],
 	"eq.hpf.freq" : ["HPF Freq", "s"],
 	"eq.hpf.slope" : ["HPF Slope", "s"],
-	"eq.b1.freq" : ["EQ1 Freq", "s"],
+	"eq.on" : ["EQ on", "b"],
+	"eq.b1.type" : ["EQ1 Type", "s"],
 	"eq.b1.gain" : ["EQ1 Gain", "s"],
+	"eq.b1.freq" : ["EQ1 Freq", "s"],	
 	"eq.b1.q" : ["EQ1 Q", "s"],
-	"eq.b2.freq" : ["EQ2 Freq", "s"],
 	"eq.b2.gain" : ["EQ2 Gain", "s"],
+	"eq.b2.freq" : ["EQ2 Freq", "s"],	
 	"eq.b2.q" : ["EQ2 Q", "s"],
-	"eq.b3.freq" : ["EQ3 Freq", "s"],
+	"eq.b3.type" : ["EQ3 Type", "s"],
 	"eq.b3.gain" : ["EQ3 Gain", "s"],
+	"eq.b3.freq" : ["EQ3 Freq", "s"],
 	"eq.b3.q" : ["EQ3 Q", "s"],
+	"dyn.on" : ["Dyn on", "b"],	
 	"dyn.ratio" : ["Dyn Ratio", "s"],
 	"dyn.threshold" : ["Dyn Threshold", "s"],
 	"dyn.outgain" : ["Dyn OutGain", "s"]
@@ -185,7 +187,7 @@ function init() {
 			local.selectedChannel.eqOn.set(args[0]); }
 		if (address=="/2/compexpEnable"){ 
 			local.selectedChannel.dynOn.set(args[0]); }
-		
+// Selected channel EQ		
 		if (address=="/2/lowcutEnable"){ 
 			local.selectedChannel.loCutOn.set(args[0]); }
 		if (address=="/2/lowcutFreqVal"){ 
@@ -193,18 +195,24 @@ function init() {
 			if (address=="/2/lowcutGradeVal"){ 
 			local.selectedChannel.hpfSlope.set(args[0]); }
 		
-		if (address=="/2/eqFreq1Val"){ 
-			local.selectedChannel.eq1Freq.set(args[0]); }
+		if (address=="/2/eqType1Val"){ 
+			local.selectedChannel.eq1Type.set(args[0]); }
 		if (address=="/2/eqGain1Val"){ 
 			local.selectedChannel.eq1Gain.set(args[0]); }
+		if (address=="/2/eqFreq1Val"){ 
+			local.selectedChannel.eq1Freq.set(args[0]); }		
 		if (address=="/2/eqQ1Val"){ 
 			local.selectedChannel.eq1Q.set(args[0]); }
+			
 		if (address=="/2/eqFreq2Val"){ 
 			local.selectedChannel.eq2Freq.set(args[0]); }
 		if (address=="/2/eqGain2Val"){ 
 			local.selectedChannel.eq2Gain.set(args[0]); }
 		if (address=="/2/eqQ2Val"){ 
 			local.selectedChannel.eq2Q.set(args[0]); }
+		
+		if (address=="/2/eqType3Val"){ 
+			local.selectedChannel.eq3Type.set(args[0]); }
 		if (address=="/2/eqFreq3Val"){ 
 			local.selectedChannel.eq3Freq.set(args[0]); }
 		if (address=="/2/eqGain3Val"){ 
