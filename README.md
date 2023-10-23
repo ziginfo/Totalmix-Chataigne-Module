@@ -1,4 +1,4 @@
-# RME-Totalmix control by OSC with chataigne
+## RME-Totalmix control by OSC with chataigne
 OSC ports must be set right in Totalmix;  defaults are Incoming : 8000 and outgoing : 9000
 and OSC must be enabled in the "Option" Menu and "Settings" and "OSC-Tab" of Totalmix !
 The Bank value can bet set at any number of Faders (in this same "OSC-Tab").
@@ -46,7 +46,7 @@ Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix !! 
 
 N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un tableau de bord (Dashboard) contenant des informations utiles.
 
-### ::: nouvelle version V2.3 >>>  Nouvelle Version V2.3
+#### ::  Nouvelle Version V2.3
 Avec quelques fonctions supplémentaires....
 Tous les conteneurs pour les feedbacks ont été déplacés hors de la section Valeurs pour être plus indépendants
 et conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...
