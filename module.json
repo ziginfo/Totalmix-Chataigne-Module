@@ -51,12 +51,12 @@
 	
 		"Undo" : {
 			"menu" : "",
-			"callback" : "undo",
+			"callback" : "undo"
 		},
 		
 		"Redo" : {
 			"menu" : "",
-			"callback" : "redo",
+			"callback" : "redo"
 		},
 		
 		"MasterVolume" : {
@@ -68,7 +68,7 @@
 					"default": 0.6, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 			
 		"Set Snapshot" : {
@@ -85,52 +85,52 @@
 						"Snapshot 5" : 4,
 						"Snapshot 6" : 3,
 						"Snapshot 7" : 2,
-						"Snapshot 8" : 1	}  }, 
+						"Snapshot 8" : 1	}  } 
 		}  },
 				
 		"Global Mute" : {
 			"menu" : "Globals",
-			"callback" : "globalMute",
+			"callback" : "globalMute"
 		},
 		
 		"Global Solo" : {
 			"menu" : "Globals",
-			"callback" : "globalSolo",
+			"callback" : "globalSolo"
 		},
 		
 		"Trim" : {
 			"menu" : "Globals",
-			"callback" : "Trim",			
+			"callback" : "Trim"			
 		},
 		
 		"Recall" : {
 			"menu" : "Globals",
-			"callback" : "mainRecall",
+			"callback" : "mainRecall"
 		},
 		
 		"Mono" : {
 			"menu" : "Globals",
-			"callback" : "mainMono",
+			"callback" : "mainMono"
 		},
 		
 		"Talkback" : {
 			"menu" : "Globals",
-			"callback" : "mainTalkback",
+			"callback" : "mainTalkback"
 		},
 		
 		"Extern-In" : {
 			"menu" : "Globals",
-			"callback" : "mainExtin",
+			"callback" : "mainExtin"
 		},
 		
 		"MainDim" : {
 			"menu" : "Globals",
-			"callback" : "mainDim",
+			"callback" : "mainDim"
 		},
 		
 		"MuteFx" : {
 			"menu" : "Globals",
-			"callback" : "mainMuteFx",
+			"callback" : "mainMuteFx"
 		},
 		
 		"MasterChVolume" : {
@@ -142,7 +142,7 @@
 					"default": 0.6, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 
 
@@ -170,7 +170,7 @@
 					"default": 0.6, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}	},
 		
 		"ChPan" : {
@@ -197,7 +197,7 @@
 					"default": 0.5, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ChMute" : {
@@ -223,7 +223,7 @@
 					"type": "Enum",
 					"options" : {
 						"On" : 1.0,
-						"Off" : 0.0 } }, 
+						"Off" : 0.0 } } 
 		}  },
 				
 		"ChSolo" : {
@@ -249,8 +249,7 @@
 					"type": "Enum",
 					"options" : {
 						"On" : 1.0,
-						"Off" : 0.0 } },  
-				
+						"Off" : 0.0 } }  			
 		}	},
 		
 		"ChGroup" : {
@@ -276,7 +275,7 @@
 					"type": "Enum",
 					"options" : {
 						"On" : 1.0,
-						"Off" : 0.0, } } 
+						"Off" : 0.0 } } 
 				
 		}  },
 		
@@ -290,7 +289,7 @@
 					"default": 0.6, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 			
 		"Gain" : {
@@ -305,7 +304,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true },   
+					"useForMapping": true }   
 				}  },
 			
 		"Pan" : {
@@ -317,48 +316,48 @@
 					"default": 0.5, 
 					"min":0,
 					"max":1,
-					"useForMapping": true },   
+					"useForMapping": true }   
 		}  },
 		
 		"Mute" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChMute",
+			"callback" : "SelChMute"
 		},
 		
 		"Solo" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChSolo",
+			"callback" : "SelChSolo"
 		},
 		
 		"Cue" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChCue",
+			"callback" : "SelChCue"
 		},
 		
 		"Phase" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChPhase",
+			"callback" : "SelChPhase"
 		},
 		
 		"Phantom" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChPhantom",
+			"callback" : "SelChPhantom"
 		},
 	
 		
 		"Autoset" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChAutoset",
+			"callback" : "SelChAutoset"
 		},
 		
 		"Loopback" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChLoopback",
+			"callback" : "SelChLoopback"
 		},
 		
 		"Stereo" : {
 			"menu" : "ActiveChannel",
-			"callback" : "SelChStereo",
+			"callback" : "SelChStereo"
 		},
 		
 		
@@ -371,28 +370,28 @@
 					"options": {
 						"Inputs" : "busInput",
 						"Playbacks" : "busPlayback",
-						"Outputs" : "busOutput" }  },	
+						"Outputs" : "busOutput" }  }	
 		}  },
 			
 		
 		"Trigger1" : {
 			"menu" : "ActiveChannel",
-			"callback" : "TrackTrigg1",
+			"callback" : "TrackTrigg1"
 		},	
 		
 		"Trigger2" : {
 			"menu" : "ActiveChannel",
-			"callback" : "TrackTrigg2",
+			"callback" : "TrackTrigg2"
 		},
 		
 		"Prev Track" : {
 			"menu" : "ActiveChannel",
-			"callback" : "TrackMoins",
+			"callback" : "TrackMoins"
 		},
 				
 		"Next Track" : {
 			"menu" : "ActiveChannel",
-			"callback" : "TrackPlus",
+			"callback" : "TrackPlus"
 		},		
 		
 		"EQ-Full" : {
@@ -612,7 +611,7 @@
 					"type": "Enum",
 					"options" : {
 						"inactive" : 0.0,
-						"On/Off" : 1.0,
+						"On/Off" : 1.0
 						 } },
 					
 			"LoCut Slope": {
@@ -652,7 +651,7 @@
 						"360" : 0.9,
 						"400" : 0.933,
 						"440" : 0.96,
-						"500" : 0.999   } 	},		 				
+						"500" : 0.999   } 	}		 				
 		}  },
 	
 		"EQ SingleBand" : {
@@ -735,12 +734,12 @@
 						"4.3" : 0.85,
 						"4.5" : 0.9,
 						"4.7" : 0.95,
-						"5.0" : 0.999   } 	}, 									
+						"5.0" : 0.999   } 	} 									
 		}  },
 	
 		"EQ Toggle on/off" : {
 			"menu" : "ActiveChMore",
-			"callback" : "SelChEqOn",
+			"callback" : "SelChEqOn"
 		},
 	
 		
@@ -787,7 +786,7 @@
 						"360" : 0.9,
 						"400" : 0.933,
 						"440" : 0.96,
-						"500" : 0.999   } 	}, 			
+						"500" : 0.999   } 	} 			
 		}  },
 			 	
 	 	"Compressor" : {
@@ -842,7 +841,7 @@
 					"default": 0.3, 
 					"min":0,
 					"max":1,
-					"useForMapping": true  }, 
+					"useForMapping": true  } 
 		}  },
 		
 		
@@ -870,7 +869,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true  }, 
+					"useForMapping": true  } 
 		}  },
 		
 		"Set Layer" : {
@@ -882,17 +881,17 @@
 					"options": {
 						"Inputs" : "busInput",
 						"Playbacks" : "busPlayback",
-						"Outputs" : "busOutput" } },	
+						"Outputs" : "busOutput" } }	
 		}  },
 		
 		"Submix->Main(1-2)" : {
 			"menu" : "Layer",
-			"callback" : "SubmixMain",
+			"callback" : "SubmixMain"
 		},
 		
 		"Submix->Phones(7-8)" : {
 			"menu" : "Layer",
-			"callback" : "SubmixPhones",
+			"callback" : "SubmixPhones"
 		},
 		
 		"Set Submix" : {
@@ -922,22 +921,22 @@
 						"17" : 16.0,
 						"18" : 17.0,
 						"19" : 18.0,
-						"20" : 19.0  }  }, 
+						"20" : 19.0  }  } 
 		}  },
 		
 		"Prev Bank" : {
 			"menu" : "Layer",
-			"callback" : "BankMoins",
+			"callback" : "BankMoins"
 		},
 				
 		"Next Bank" : {
 			"menu" : "Layer",
-			"callback" : "BankPlus",
+			"callback" : "BankPlus"
 		},
 		
 		"Sync" : {
 			"menu" : "Layer",
-			"callback" : "SyncTrigg",
+			"callback" : "SyncTrigg"
 		},
 		
 		"MuteGroup" : {
@@ -950,7 +949,7 @@
 						"MuteGr 1" : 4,
 						"MuteGr 2" : 3,
 						"MuteGr 3" : 2,
-						"MuteGr 4" : 1	}	}, 
+						"MuteGr 4" : 1	}	} 
 		}	},
 		
 		"SoloGroup" : {
@@ -963,7 +962,7 @@
 						"SoloGr 1" : 4,
 						"SoloGr 2" : 3,
 						"SoloGr 3" : 2,
-						"SoloGr 4" : 1  }	}, 
+						"SoloGr 4" : 1  }	} 
 		}  },
 		
 		"FaderGroup" : {
@@ -976,13 +975,13 @@
 						"FaderGr 1" : 4,
 						"FaderGr 2" : 3,
 						"FaderGr 3" : 2,
-						"FaderGr 4" : 1  } }, 
+						"FaderGr 4" : 1  } } 
 		}  },
 	
 		
 		"Reverb-On" : {
 			"menu" : "Reverb",
-			"callback" : "ReverbOn",
+			"callback" : "ReverbOn"
 		},
 				
 		"ReverbType" : {
@@ -1007,7 +1006,7 @@
 						"Thicker" : 0.97,
 						"Envelope" : 0.27,
 						"Gated" : 0.34,
-						"Space" : 0.42	}  },
+						"Space" : 0.42	}  }
 		}  },
 		
 		"ReverbPreDel" : {
@@ -1019,7 +1018,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbDecay" : {
@@ -1031,7 +1030,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbLoCut" : {
@@ -1043,7 +1042,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbHicut" : {
@@ -1055,7 +1054,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbRoomScale" : {
@@ -1067,7 +1066,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbAttack" : {
@@ -1079,7 +1078,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"GateRevHold" : {
@@ -1091,7 +1090,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"GateRevRelease" : {
@@ -1103,7 +1102,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbHidamp" : {
@@ -1115,7 +1114,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbSmooth" : {
@@ -1127,7 +1126,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbWidth" : {
@@ -1139,7 +1138,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"ReverbVolume" : {
@@ -1151,7 +1150,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		
@@ -1159,7 +1158,7 @@
 		
 		"Delay-On" : {
 			"menu" : "Delay",
-			"callback" : "DelayOn",
+			"callback" : "DelayOn"
 		},
 		
 		"DelayType" : {
@@ -1171,7 +1170,7 @@
 					"options" : {
 						"Stereo Echo" : 0.0,
 						"Stereo Cross" : 0.5,
-						"Pong Echo" : 0.9  }  },
+						"Pong Echo" : 0.9  }  }
 		}  },
 		
 		"DelayTime" : {
@@ -1183,7 +1182,7 @@
 					"default": 0.3, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"DelayFeedback" : {
@@ -1195,7 +1194,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"DelayWidth" : {
@@ -1207,7 +1206,7 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		"DelayVolume" : {
@@ -1219,31 +1218,31 @@
 					"default": 0, 
 					"min":0,
 					"max":1,
-					"useForMapping": true }, 
+					"useForMapping": true } 
 		}  },
 		
 		
 		"Play" : {
 			"menu" : "Player",
-			"callback" : "Play",
+			"callback" : "Play"
 		},
 		
 		
 		"Stop" : {
 			"menu" : "Player",
-			"callback" : "Stop",
+			"callback" : "Stop"
 		},
 		
 		"Record" : {
 			"menu" : "Player",
-			"callback" : "Record",
+			"callback" : "Record"
 		},
 		
 		
 		"Time" : {
 			"menu" : "Player",
-			"callback" : "Time",
-		},
+			"callback" : "Time"
+		}
 
 		
 	}
