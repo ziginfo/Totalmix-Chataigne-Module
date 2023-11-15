@@ -3,7 +3,7 @@
   "type":"OSC",
   "path":"Sound Card",
   
-  "version":"2.3",
+  "version":"2.4",
   "description":"Allow you to control RME-Totalmix with chataigne",
   "url":"https://github.com/ziginfo/Totalmix-Chataigne-Module",
   "downloadURL":"https://github.com/ziginfo/Totalmix-Chataigne-Module/archive/refs/heads/main.zip",
