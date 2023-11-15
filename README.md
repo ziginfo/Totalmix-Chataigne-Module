@@ -23,7 +23,8 @@ Vumeters have been added too
 
 ***:::: Older Version V2.2***
 
-the session file "Totalmix-Template.noisette" has also been updated
+the session file "Totalmix-Template.noisette" has also been updated   
+the picture : "Totalmix-Template-Actions.png" shows the "Template-Actions" that are used for the Action-Buttons in the Dashboard !
 
 
 ## Français .....
