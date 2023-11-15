@@ -14,7 +14,7 @@ All OSC-Commands will only affect Tracks which are visible in Totalmix !! Invisi
 
 Feel free to use the attached Template-Session-File, which includes a Dashboard with with useful information.
 
-### >>>  New Version V2.3
+### >>>  New Version V2.4
 with a few more functions....
 
 all the Containers for Requested Data have been moved out of the Value Section to be more independant  
@@ -43,7 +43,7 @@ Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix !! 
 
 N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un tableau de bord (Dashboard) contenant des informations utiles.
 
-#### ::  Nouvelle Version V2.3
+#### ::  Nouvelle Version V2.4
 Avec quelques fonctions supplémentaires....  
 Tous les conteneurs pour les feedbacks ont été déplacés hors de la section Valeurs pour être plus indépendants  
 et conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...  
