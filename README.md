@@ -14,17 +14,14 @@ All OSC-Commands will only affect Tracks which are visible in Totalmix !! Invisi
 
 Feel free to use the attached Template-Session-File, which includes a Dashboard with with useful information.
 
-**:::: New Version V2.2**
-
-with a few more functions....  
-the session file "Totalmix-Template.noisette" has also been updated
-
 ### >>>  New Version V2.3
 with a few more functions....
 
 all the Containers for Requested Data have been moved out of the Value Section to be more independant  
 and a full "Selected Channel Container" has been added to see all the feedback in live...  
 Vumeters have been added too
+
+***:::: Older Version V2.2***
 
 the session file "Totalmix-Template.noisette" has also been updated
 
