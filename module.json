@@ -31,19 +31,11 @@
 				"listenToFeedback":false } }
 	},
 	
-	"parameters": {
-	},
+	"parameters": { },
 	
 	"scripts": ["Totalmix.js"],
 	
-	"values":  {
-	
-		"Click to Sync all":
-			{ "type":"Trigger",
-				"description":"Update actual device status.\n"
-			}
-		
-	},
+	"values":  {  },
 	
 	
 	
