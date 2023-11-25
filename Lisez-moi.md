@@ -1,7 +1,7 @@
 ## RME-Totalmix contrôle par OSC avec Chataigne   
 Totalmix doit être lancé sur l'Ordinateur !!   
-Les ports OSC doivent être correctement configurés dans Totalmix ; les valeurs par défaut sont Port (incoming) : 8000 et Port (outgoing) : 9000  
-et OSC dois être activés dans le menu "Option" de Totalmix ! Dans ce même Menu il y a les Sous-Menu Settings pour plus de réglages.  
+Les ports OSC doivent être correctement configurés dans Totalmix ; les valeurs par défaut sont Port (incoming) : 8000 et Port (outgoing) : 9000  ou parfois 9001 ...  
+OSC doit être activé dans le menu "Option" de Totalmix ! Dans ce même Menu il y a le Sous-Menu Settings pour plus de réglages.  
 La valeur du « Nombre de Faders par Banque » peut être modifiée dans le Menu "Options/Settings/OSC" si vous le souhaitez. La valeur par défaut est 8 (peut être définie sur 12, 16, 20, etc.).  
 
 Totalmix permet de gérer presque toutes les cartes son RME ; c'est une console de mixage virtuelle full matricielle, ce qui rend la télécommande, notamment par OSC et Chataigne, assez complexe !!  
@@ -11,7 +11,7 @@ Tous les paramètres d'égalisation, de compresseur et de gate etc n'affectent q
 De plus, tous les réglages d'EQ, Compression, Gate mais aussi FX (Reverb et Delay) ne concernent que les interfaces avec DSP (comme les UCX et UFX etc).  
 Les paramètres du Player (Play, Stop, Record etc.) concernent uniquement l'UFX !
 
-Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix !! Les pistes invisibles/cachées sont ignorées ! Par conséquent, changer la disposition des pistes dans Totalmix change également les "cibles réelles" pour la plupart des commandes OSC !
+Toutes les commandes OSC n'affecteront que les pistes visibles dans Totalmix sur l'ordinateur !! Les pistes invisibles/cachées sont ignorées ! Par conséquent, changer la disposition des pistes dans Totalmix change également les "cibles réelles" pour la plupart des commandes OSC !
 
 N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un tableau de bord (Dashboard) contenant des informations utiles.
 
