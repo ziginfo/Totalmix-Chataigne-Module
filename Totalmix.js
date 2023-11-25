@@ -1,9 +1,20 @@
+// =====================================================================
+// 						DECLARE VARIABLES
+// =====================================================================
+
 var TSSendAlive = 0;
+var busInputs;
+var busPlaybacks;
+var busOutputs;
+var selectLayer ;
+var setLayer ;
+var activeLayer;
+var prevTrack ;
+var nextTrack ;
 var globals;
 var names;
 var selchan;
 var vus;
-
 
 var channelNames = {
 	't.1' : "Channel 1", 
@@ -13,9 +24,7 @@ var channelNames = {
 	't.5' : "Channel 5", 
 	't.6' : "Channel 6", 
 	't.7' : "Channel 7", 
-	't.8' : "Channel 8", 
-	
-};
+	't.8' : "Channel 8" };
 
 var commandNames = {
 	"name"	:	["Label", "s"],
@@ -46,10 +55,22 @@ var commandNames = {
 	"dyn.on" : ["Dyn on", "b"],	
 	"dyn.ratio" : ["Dyn Ratio", "s"],
 	"dyn.threshold" : ["Dyn Threshold", "s"],
-	"dyn.outgain" : ["Dyn OutGain", "s"]
-};
+	"dyn.outgain" : ["Dyn OutGain", "s"] };
+	
+//====================================================================
+//						INITIAL FUNCTIONS 
+//====================================================================
 
 function init() {
+
+// Insert Parameter Buttons & Infos======>>>>>>>>>>>>>>>>>>>>>>>>
+//	activeLayer = local.values.addStringParameter("Active Layer","Shows Active Layer", "Active Layer");
+	selectLayer = local.values.addEnumParameter("Select Layer", "Select Layer", "Inputs","busInput","Playbacks","busPlayback","Outputs","busOutput") ;
+	setLayer = local.values.addTrigger("Click to set Layer", "Click to set Layer" , false);	
+
+// =====================================================================
+// 						CREATE CONTAINERS
+// =====================================================================
 
 //Globals Container
 	globals = local.values.addContainer("Globals");
@@ -59,9 +80,9 @@ function init() {
 		globals.addBoolParameter("globalSolo", "", "");
 		globals.addStringParameter("----", "", "-----");
 		globals.addStringParameter("Active Layer", "", "");
-		globals.addBoolParameter("InputLayer", "", "");
-		globals.addBoolParameter("PlaybackLayer", "", "");
-		globals.addBoolParameter("OutputLayer", "", "");
+		globals.addTrigger("Previous Bank", "" , false);
+		globals.addTrigger("Next Bank", "" , false);
+		globals.addTrigger("Set Main Submix", "" , false);
 		
 //Channel Names Container
 	names = local.values.addContainer("Track Names");
@@ -84,6 +105,9 @@ function init() {
 	selchan = local.values.addContainer("Selected Channel");
 	selchan.setCollapsed(true);
 	selchan.addStringParameter("Active Layer", "", "");
+	selchan.addStringParameter("Active Channel", "", "");
+	selchan.addTrigger("Previous Track", "Trigger Previous Track" , false);
+	selchan.addTrigger("Next Track", "Trigger Next Track" , false);
 	var champs = util.getObjectProperties(commandNames);
 	for (var n = 0; n < champs.length; n++) {
 				if (commandNames[champs[n]][1] == "f") {
@@ -104,9 +128,36 @@ function init() {
 		vus.addFloatParameter("Level "+(i+1), "", 0, 0, 1); } 
 		
 }
+
+//========================================================================
+//							 VALUE CHANGE EVENTS
+//========================================================================
+
+function moduleValueChanged(value) {
+// Trigger Layer 		
+		if (value.name == "clickToSetLayer"){
+		var layer = local.values.selectLayer.get() ;
+		local.send("/1/"+layer, 1.0);
+		local.send("/2/"+layer, 1.0);}
+// prev & next Track		
+		if (value.name == "previousTrack"){
+		local.send("/2/track-", 1.0);}
+		if (value.name == "nextTrack"){
+		local.send("/2/track+", 1.0);}
+// prev & next Bank		
+		if (value.name == "previousBank"){
+		local.send("/1/bank-", 1.0);}
+		if (value.name == "nextBank"){
+		local.send("/1/bank+", 1.0);}
+// Set Main Submix		
+		if (value.name == "setMainSubmix"){
+		local.send("/setSubmix", 1.0);}  
+}
 	
 	
-/// Request Datas	
+//============================================================
+//							OSC EVENTS
+//============================================================	
 	
 	function oscEvent(address, args) { 
 	
@@ -140,40 +191,43 @@ function init() {
 // Globals	
 		if (address=="/1/mastervolumeVal"){
 			local.values.globals.masterFader.set(args[0]); }
-			
+			if (address=="/1/globalMute"){ 
+			local.values.globals.globalMute.set(args[0]); }
+		if (address=="/1/globalSolo"){ 
+			local.values.globals.globalSolo.set(args[0]); }
+// Layers			
 		if (address=="/1/busInput"){ 
-			local.values.globals.inputLayer.set(args[0]); 
+//			local.values.globals.inputLayer.set(args[0]); 
 			if (args[0]==true) {
+//			local.values.activeLayer.set("Inputs") ;
 			local.values.trackNames.activeLayer.set("Inputs") ;
 			local.values.trackFaders.activeLayer.set("Inputs") ;
 			local.values.selectedChannel.activeLayer.set("Inputs") ;
 			local.values.vumeters.activeLayer.set("Inputs") ;
 			local.values.globals.activeLayer.set("Inputs") ; } }
 		if (address=="/1/busPlayback"){ 
-			local.values.globals.playbackLayer.set(args[0]);
+//			local.values.globals.playbackLayer.set(args[0]);
 			if (args[0]==true) {
+//			local.values.activeLayer.set("Playbacks") ;
 			local.values.trackNames.activeLayer.set("Playbacks") ;
 			local.values.trackFaders.activeLayer.set("Playbacks") ;
 			local.values.selectedChannel.activeLayer.set("Playbacks") ;
 			local.values.vumeters.activeLayer.set("Playbacks") ;
 			local.values.globals.activeLayer.set("Playbacks") ; } }
 		if (address=="/1/busOutput"){ 
-			local.values.globals.outputLayer.set(args[0]);
+//			local.values.globals.outputLayer.set(args[0]);
 			if (args[0]==true) {
+//			local.values.activeLayer.set("Outputs") ;
 			local.values.trackNames.activeLayer.set("Outputs") ;
 			local.values.trackFaders.activeLayer.set("Outputs") ;
 			local.values.selectedChannel.activeLayer.set("Outputs") ;
 			local.values.vumeters.activeLayer.set("Outputs") ;
 			local.values.globals.activeLayer.set("Outputs") ; } }
-		
-		if (address=="/1/globalMute"){ 
-			local.values.globals.globalMute.set(args[0]); }
-		if (address=="/1/globalSolo"){ 
-			local.values.globals.globalSolo.set(args[0]); }
 				
 // Selected channel (Page2)
 		if (address=="/2/trackname"){ 
-			local.values.selectedChannel.label.set(args[0]);}
+			local.values.selectedChannel.label.set(args[0]);
+			local.values.selectedChannel.activeChannel.set(args[0]);}
 		if (address=="/2/levelLeft"){
 			local.values.selectedChannel.levelL.set(args[0]); }
 		if (address=="/2/levelRight"){
@@ -240,7 +294,9 @@ function init() {
 
 }
 
-/// keep alive !!
+//============================================================
+//				KEEP ALIVE -> X-Remote Loop
+//============================================================
 function update(deltaTime) {
 	var now = util.getTime();
 	if (now > TSSendAlive) {
@@ -256,9 +312,10 @@ val= val+1;}
 else {local.send("/2/trackname");	
 val=0 ;}
 }
-///
 
-//Common Functions Page-1
+//=========================================================
+//					 REGULAR FUCNTIONS
+//=========================================================
 // Globals
 
 function undo() {
@@ -308,8 +365,8 @@ function mainMuteFx() {
 // Set Layer (Page1)
 
 function set_layer(target) {
-	local.send("/1/"+target+"", 1.0);
-	local.send("/2/"+target+"", 1.0);
+	local.send("/1/"+target, 1.0);
+	local.send("/2/"+target, 1.0);
 	
 }
 
