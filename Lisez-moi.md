@@ -18,4 +18,4 @@ N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un
 #### ::  Nouvelle Version V2.4
 Avec quelques fonctions supplémentaires....  
 
-**Le fichier de session "Totalmix-Template.noisette" a aussi été mis à jour**
+***Le fichier de session "Totalmix-Template.noisette" a aussi été mis à jour***
