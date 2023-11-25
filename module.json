@@ -22,7 +22,7 @@
 	"defaults": {
 		"autoAdd":true,
 		"OSC Input": {
-			"localPort" : 9000 },
+			"localPort" : 9001 },
 			
 		"OSC Outputs": {
 			"OSC Output": {
