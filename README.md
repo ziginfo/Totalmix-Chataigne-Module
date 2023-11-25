@@ -1,7 +1,8 @@
-## RME-Totalmix control by OSC with chataigne
-OSC ports must be set right in Totalmix;  defaults are Incoming : 8000 and outgoing : 9000  
+## RME-Totalmix control by OSC with chataigne   
+Totalmix must be launched on the Computer !!   
+OSC ports must be set right in Totalmix;  default settings in Totalmix are commonly : Incoming : 8000 and outgoing : 9000 or 9001  
 and OSC must be enabled in the "Option" Menu and "Settings" and "OSC-Tab" of Totalmix !  
-The Bank value can bet set at any number of Faders (in this same "OSC-Tab").  
+The "Number of Faders per Bank"  value can be changed in the "Options/Settings/OSC"-Menu if desired. Default is 8 (can be set to 12, 16, 20 etc)  
 
 Totalmix allows you to manage almost all RME sound cards; it is a full matrix virtual mixing console,  which makes the remote control, notably by OSC and Chataigne, quite complex!!  
 Most commands are not absolute (-> do not adress to a given single channel) but they are "relative". This means a given command concerns a given Channel (first, second, third etc) on a given layer and routed to a given Submix... all of them are freely assignable !! Its just a full "Matrix-Affair" ! 
@@ -10,28 +11,26 @@ All EQ, Compressor, Gate settings only affect the currently active/selected chan
 Furthermore, all EQ, Compression, Gate and also FX (Reverb and Delay) settings only concern interfaces with DSP (like UCX and UFX etc).  
 The Player settings (Play, Stop, Record etc.) only concern the UFX !  
 
-All OSC-Commands will only affect Tracks which are visible in Totalmix !! Invisible/hidden Tracks are ignored ! Consequently, changing the Tracks-Layout in Totalmix changes also the "Real Targets" for most of the OSC-Commands !
+All OSC-Commands will only affect Tracks which are visible in Totalmix on the Computer !! Invisible/hidden Tracks are ignored ! Consequently, changing the Tracks-Layout in Totalmix changes also the "Real Targets" for most of the OSC-Commands !
 
-Feel free to use the attached Template-Session-File, which includes a Dashboard with with useful information.
+Feel free to use the attached Template-Session-File, which includes a Dashboard with useful information.
+
 
 ### >>>  New Version V2.4
-with a few more functions....
+with a few more functions.... 
 
-all the Containers for Requested Data have been moved out of the Value Section to be more independant  
-and a full "Selected Channel Container" has been added to see all the feedback in live...  
-Vumeters have been added too
+the session file "Totalmix-Template.noisette" has also been updated   
 
 ***:::: Older Version V2.2***
 
-the session file "Totalmix-Template.noisette" has also been updated   
-the picture : "Totalmix-Template-Actions.png" shows the "Template-Actions" that are used for the Action-Buttons in the Dashboard !
 
 
 ## Français .....
-## RME-Totalmix contrôle par OSC avec Chataigne
+## RME-Totalmix contrôle par OSC avec Chataigne   
+Totalmix doit être lancé sur l'Ordinateur !!   
 Les ports OSC doivent être correctement configurés dans Totalmix ; les valeurs par défaut sont Port (incoming) : 8000 et Port (outgoing) : 9000  
 et OSC dois être activés dans le menu "Option" de Totalmix ! Dans ce même Menu il y a les Sous-Menu Settings pour plus de réglages.  
-La valeur de "Bank" peut être définie pour n'importe quel nombre de faders (dans ce même sous-menu Settings et le Tab "OSC").  
+La valeur du « Nombre de Faders par Banque » peut être modifiée dans le Menu "Options/Settings/OSC" si vous le souhaitez. La valeur par défaut est 8 (peut être définie sur 12, 16, 20, etc.).  
 
 Totalmix permet de gérer presque toutes les cartes son RME ; c'est une console de mixage virtuelle full matricielle, ce qui rend la télécommande, notamment par OSC et Chataigne, assez complexe !!  
 La plupart des commandes ne sont pas absolues (-> ne s'adressent pas à un seul canal donné) mais elles sont "relatives". Cela signifie qu'une commande donnée concerne un canal donné (premier, deuxième, troisième etc) sur une couche donnée et envoyé vers un Submix/Bus donné... et tout cela est librement assignable !! C'est juste une "Affaire Matrix" complète !
@@ -46,8 +45,5 @@ N'hésitez pas à utiliser le fichier Totalmix-Template" ci-joint, qui inclue un
 
 #### ::  Nouvelle Version V2.4
 Avec quelques fonctions supplémentaires....  
-Tous les conteneurs pour les feedbacks ont été déplacés hors de la section Valeurs pour être plus indépendants  
-et conteneur dédié au Canal Actif (Selected Channel)  a été ajouté pour voir tous les info du feedback en direct...  
-Des vumètres ont également été ajoutés
 
 **Le fichier de session "Totalmix-Template.noisette" a aussi été mis à jour**
